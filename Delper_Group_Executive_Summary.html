@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delper Group: Executive Summary</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --surface: #ffffff; --text: #1d1d1b; --muted: #5f5f5a;
+    --accent: #1f5c4a; --border: #dcdcd6;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161715; --surface: #1f201d; --text: #ecebe6; --muted: #a6a69e;
+      --accent: #7fc4a9; --border: #3a3b36;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161715; --surface: #1f201d; --text: #ecebe6; --muted: #a6a69e;
+    --accent: #7fc4a9; --border: #3a3b36;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  p, li, td, th, footer p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+  /* Hero */
+  .hero {
+    position: relative; min-height: 80vh; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: calc(env(safe-area-inset-top, 0px) + 3rem) 1.25rem 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-art {
+    position: relative; flex-shrink: 0; margin-bottom: 1.5rem;
+    width: 220px; height: 220px;
+    transform: none;
+    opacity: 0.9; pointer-events: none;
+  }
+  .hero-art .ring { fill: none; stroke: var(--accent); stroke-width: 1.2; }
+  .hero-art .ring-a { stroke-dasharray: 6 8; }
+  .hero-art .ring-b { stroke-dasharray: 2 6; opacity: 0.6; }
+  .hero-art .core { fill: var(--accent); fill-opacity: 0.12; stroke: var(--accent); stroke-width: 1.5; }
+  .hero-art .node { fill: var(--accent); }
+  .spin-slow { transform-box: view-box; transform-origin: 200px 200px; animation: spin 24s linear infinite; }
+  .spin-rev { transform-box: view-box; transform-origin: 200px 200px; animation: spin 36s linear infinite reverse; }
+  .spin-fast { transform-box: view-box; transform-origin: 200px 200px; animation: spin 14s linear infinite; }
+  .pulse { transform-box: view-box; transform-origin: 200px 200px; animation: pulse 4s ease-in-out infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.06); opacity: 0.7; }
+  }
+
+  .hero-text { position: relative; z-index: 1; max-width: 860px; width: 100%; text-align: center; }
+  .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 0.6rem; }
+  h1 {
+    font-size: clamp(2rem, 6vw, 3.6rem); line-height: 1.05; margin: 0 0 1rem;
+    letter-spacing: -0.02em; color: var(--accent);
+  }
+  .lede { font-size: 1.1rem; max-width: 46rem; margin: 0 auto; }
+
+  main { max-width: 860px; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
+  h2 {
+    font-size: 1.25rem; margin: 3rem 0 1rem; padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border); color: var(--accent);
+  }
+  h3 { font-size: 1rem; margin: 0 0 0.4rem; }
+  p { margin: 0 0 0.9rem; }
+  ul { padding-left: 1.2rem; margin: 0.4rem 0 0.9rem; }
+  ul ul { margin-bottom: 0.3rem; }
+  li { margin-bottom: 0.35rem; }
+
+  .grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.25rem 1.4rem;
+  }
+
+  .equity { margin: 1.25rem 0 0.5rem; }
+  .equity-bar { display: flex; height: 44px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .equity-bar div { display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 600; color: #fff; }
+  .equity-a { width: 60%; background: var(--accent); }
+  .equity-b { width: 40%; background: #7a8f86; }
+  .equity-labels { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; }
+
+  .stats { display: grid; gap: 0.75rem; grid-template-columns: repeat(2, 1fr); margin: 1rem 0; }
+  @media (min-width: 720px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+  .stat .num { font-size: 1.35rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .stat .lbl { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: var(--surface); }
+  th, td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; text-align: center; }
+  td.num, th.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.ctr { text-align: center; }
+
+  footer {
+    margin-top: 3rem; color: var(--muted); font-size: 0.85rem;
+    border-top: 1px solid var(--border); padding-top: 1rem;
+  }
+  footer a { color: var(--accent); }
+
+  /* Milestone timeline: each item animates in as it scrolls into view */
+  .timeline { position: relative; padding-left: 1.5rem; margin: 1rem 0; }
+  .timeline::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--border); }
+  .milestone { position: relative; margin-bottom: 1.5rem; }
+  .milestone::before {
+    content: ""; position: absolute; left: calc(-1.5rem - 6px); top: 0.45rem;
+    width: 12px; height: 12px; border-radius: 50%; background: var(--accent);
+  }
+  .milestone .when { color: var(--accent); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.15rem; }
+  .milestone .amount { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.2rem; }
+  @supports (animation-timeline: view()) {
+    .milestone {
+      animation: milestone-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 35%;
+    }
+  }
+  @keyframes milestone-in {
+    from { opacity: 0; transform: translateX(-24px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spin-slow, .spin-rev, .spin-fast, .pulse, .milestone { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <svg class="hero-art" viewBox="0 0 400 400" aria-hidden="true">
+    <circle class="ring ring-a spin-slow" cx="200" cy="200" r="190"></circle>
+    <circle class="ring ring-b spin-rev" cx="200" cy="200" r="150"></circle>
+    <g class="spin-fast">
+      <ellipse class="ring" cx="200" cy="200" rx="120" ry="48" transform="rotate(-20 200 200)"></ellipse>
+      <circle class="node" cx="320" cy="200" r="7"></circle>
+    </g>
+    <g class="spin-slow">
+      <ellipse class="ring" cx="200" cy="200" rx="95" ry="36" transform="rotate(35 200 200)"></ellipse>
+      <circle class="node" cx="200" cy="105" r="6"></circle>
+    </g>
+    <circle class="core pulse" cx="200" cy="200" r="58"></circle>
+    <circle class="node pulse" cx="200" cy="200" r="8"></circle>
+  </svg>
+  <div class="hero-text">
+    <p class="eyebrow">Executive Summary &middot; Revised October 2026</p>
+    <h1>Delper Group</h1>
+    <p class="lede">A three-track digital trust, commerce and security group. From Year 1 GK Bharta holds 100% of the group and receives 40% of after-tax profit from each track every year, funded by palm oil income. Delper Aegis launches in Year 7.</p>
+  </div>
+</section>
+
+<main>
+
+  <section>
+    <h2>Seed Round: USD 8.00M from Investor</h2>
+    <p>Seed investors put USD 8.00 Million into the group, USD 4.00 Million into Track 1 (Global Trust Infrastructure) and USD 4.00 Million into Track B (Delper Retail). In Year 1 GK Bharta pays them USD 8.00 Million, which returns their principal and buys back their 40% interest. GK funds that payment from palm oil income. In Year 1 GK also acquires Radiant Synage's 60% interest for a lump-sum payment of USD 4.00 Million. From Year 1 GK holds 100% of the group and receives 40% of its after-tax profit each year, with 60% reinvested. In Year 7 the USD 1.90 Billion Delper Aegis launch is funded from GK Bharta's profit, and GK owns 100% of Aegis.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">USD 8.00M</div><div class="lbl">Seed Round by investor</div></div>
+      <div class="stat"><div class="num">USD 8.00M, 40% ownership</div><div class="lbl">Buyback Paid by GK, Year 1</div></div>
+      <div class="stat"><div class="num">USD 4.00M, 60% ownership</div><div class="lbl">Radiant 60% lump-sum purchase by GK, Year 1</div></div>
+      <div class="stat"><div class="num">USD 1.90B</div><div class="lbl">Aegis Launch, Year 7</div></div>
+      <div class="stat"><div class="num">USD 49.00T</div><div class="lbl">Govt bond purchase out of GK profit, Years 15 to 24, to build global multimodal transport, with IMF and other agencies</div></div>
+      <div class="stat"><div class="num">CSR</div><div class="lbl">The CSR capital pool is 2% of pretax profit, funded from the company's profit engine. Communities take on no debt and no operating obligations, so the rollout is zero-cost to beneficiaries. Deployment starts with 31,583 urban smart pods by Year 5 and scales to a planet-wide utility network by Year 20.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>GK Ownership Transition</h2>
+    <p>From Year 1, GK Bharta holds 100% of Delper Group. It acquires the seed investors' 40% for USD 8.00 Million and Radiant Synage's 60% for a lump-sum payment of USD 4.00 Million.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Stage</th><th>Delper Group</th><th>Delper Aegis</th></tr></thead>
+      <tbody>
+        <tr><td>Before Year 1</td><td class="ctr">Seed investors 40% (USD 8.00M); Radiant Synage 60%</td><td class="ctr">Not yet launched</td></tr>
+        <tr><td>Year 1 transactions</td><td class="ctr">GK pays the seed investors USD 8.00M, buying back their 40%; GK pays Radiant a lump sum of USD 4.00M for its 60%. GK holds 100%.</td><td class="ctr">Not yet launched</td></tr>
+        <tr><td>Year 7 launch</td><td class="ctr">GK Bharta 100%; 40% of after-tax profit paid to GK each year, 60% reinvested</td><td class="ctr">GK Bharta 100%; USD 1.90B launch funded from GK profit; revenue starts; launch advance repaid from Aegis profit in Year 7; then 40% of after-tax profit paid to GK, 60% reinvested</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>Delper Group: GK Bharta 100% from Year 1.</li>
+      <li>Track 1 (Global Trust Infrastructure, Singapore SPV): 40% of after-tax profit is paid to GK Bharta each year; 60% is reinvested as growth capital.</li>
+      <li>Track B (Delper Retail, India): 40% of after-tax profit is paid to GK Bharta each year; 60% is reinvested.</li>
+      <li>Delper Aegis: GK Bharta 100%. The full launch is funded from GK profit in Year 7. From Year 7, after the launch advance is repaid, 40% of after-tax profit is paid to GK Bharta; 60% is reinvested.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Dual-Track Operational Architecture</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Track 1: Global Trust Infrastructure (Singapore SPV)</h3>
+        <ul>
+          <li>Focus: Cross-border B2B bulk enterprise trade platform utilizing Radiant's trust-layer integration model.</li>
+          <li>Initial capital (USD 4.0M, seed investors): USD 2.21M trading capital and USD 1.79M set-up, including SAP BTP and Signavio middleware ($0.86M), SAP S/4HANA Core ERP ($0.39M), and SGS quality webhooks ($0.15M).</li>
+          <li>Unit Economics: 15.184% take rate on premium commodities and 24.2% on consumer and high-margin goods, over a 14-day settlement cycle (26 capital turns per year from Year 2; 17.6 in Year 1).</li>
+          <li>Transactions must be at least USD 300. Liquidity spread: a 6.0% net annual spread on 14 to 90 day facilities secured by bonded cargo, which sits inside the 24.2% turnover basis and is not added on top.</li>
+          <li>Sovereign BOOT concessions from Year 6 apply 15.184% to port duties and clearing fees. These revenues are not included in the revenue figures in this summary.</li>
+          <li>Profit: operating expenses are 40% of revenue and income tax is 17% of pre-tax profit, leaving 49.8% of revenue as net profit. 40% of net profit is paid to GK Bharta each year; 60% is reinvested.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Track B: Delper Retail (India Domestic Engine)</h3>
+        <ul>
+          <li>Focus: India-focused, buyer-first digital marketplace integrated with the Open Network for Digital Commerce (ONDC).</li>
+          <li>Initial capital (USD 4.0M, seed investors): spent on the Year 1 pilot, covering core team and engineering, 3PQC set-up, escrow and licensing, RTB vetting, contingency and cloud.</li>
+          <li>The Retail model is unvalidated. Escrow with Axis Bank and QC with SGS are not yet signed. Sellers pay the 2% commission and lead generation from sale proceeds on escrow release, after a 15-day acceptance window.</li>
+          <li>Unit Economics: 2% commission on each sale, deducted from escrow release. Sellers pay a USD 100 annual onboarding fee and prepay real-time bidding and 3PQC inspection costs at actual cost. Buyers pay no separate fee.</li>
+          <li>Profit: revenue is Delper gross profit. Operating expenses are 50% and income tax is 17%, leaving 41.5% of revenue as net profit. 40% is paid to GK Bharta each year; 60% is reinvested.</li>
+          <li>Five-Year Target: 7.5M orders and buyers and 15,000 certified sellers in Year 5, India only through ONDC.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Delper Aegis (Launch in Year 7)</h3>
+        <ul>
+          <li>Focus: Factory-as-a-service industrial cybersecurity built around the Delper Guard firewall, with an initial hardware run of 3,000,000 units.</li>
+          <li>Funding: USD 1.90 Billion, funded from GK Bharta profit in Year 7, covering USD 531.5 Million of silicon development and USD 1,367.5 Million of hardware, a total launch cost of USD 1,899.0 Million.</li>
+          <li>Revenue starts in Year 7 at USD 5.91B and reaches USD 62.97B in Year 10 in the model.</li>
+          <li>Profit: operating costs follow the source cost schedule (FDE staffing, operations, firmware, cloud hosting and hardware cost of sales), with 17% tax on profit. GK advances the USD 1.90 Billion launch, which Aegis repays from its profit before the 40% GK share applies.</li>
+          <li>Certification testing runs in Years 7 to 8.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Seed Round Buyback by GK, Funded by Palm Oil</h2>
+    <p>The palm oil vehicle routes 1,000,000 metric tons of bulk palm oil a year through irrevocable at-sight letters of credit. GK Bharta earns a sourcing commission of USD 15 per ton, irrespective of palm oil price, which gives USD 15.00 Million a year. In Year 1 GK uses this income to pay the seed investors USD 8.00 Million, which returns their principal and buys back their 40% interest, and to pay Radiant USD 4.00 Million. The palm oil business continues as usual after the buyback. Malaysia is used only for palm oil purchasing, to clear the debt.</p>
+  </section>
+
+  <section>
+    <h2>Delper Aegis: Factory-as-a-Service, 100% Capital from GK</h2>
+    <p>Delper Aegis is an industrial-grade cybersecurity layer built around the Delper Guard firewall, with an initial hardware run of 3,000,000 units. The USD 1.90 Billion launch in Year 7 is advanced from GK Bharta's profit share, covering USD 531.5 Million of silicon development and USD 1,367.5 Million of hardware, a total launch cost of USD 1,899.0 Million. Revenue starts in Year 7.</p>
+    <ul>
+      <li>Certification: IEC 62443 SL-4 is a target, not a rating. Formal testing is scheduled for program Years 1 to 2, which is Years 7 to 8 in the group timeline.</li>
+      <li>Roadmap, in group years from the Year 7 launch: launch and certification in Years 7 to 8; AI assurance in Years 9 to 11; post-quantum migration in Years 12 to 13; sustained lifecycle support in Years 14 to 16.</li>
+      <li>Full-scale recurring revenue: about USD 188.5 Billion a year at 1,000,000 lines on the revised bill of USD 15,706.50 a month per line. This is a gross projection that assumes every line is staffed and billed. If customers accept only the USD 8,371.50 source subscription, it falls to about USD 100.5 Billion. The group model uses the supply-limited revenue path instead: USD 5.91B in Year 7, rising to USD 62.97B in Year 10.</li>
+      <li>Workforce: round-the-clock cover needs 4.2 field engineers (FDEs) per plant. At 12 lines per plant, the full 1,000,000-line base needs about 350,000 FDEs. The source's talent model supports about 159,390 engineers, so hiring capacity, not customer demand, is the binding constraint. The 33,000 figure is the market shortage of FDE roles, not Aegis's own requirement.</li>
+      <li>Funding and payout: GK Bharta advances the full Year 7 launch from its profit share. Aegis repays that advance from its own after-tax profit before any profit split. Only the remaining profit is paid out, 40% to GK Bharta and 60% reinvested. On the source cost schedule, the advance is repaid within Year 7. If Year 7 revenue fell below about USD 4.4 Billion, the advance would carry into Year 8.</li>
+      <li>Verdict: conditionally viable. It requires plants averaging about 26 or more lines, customers accepting a total bill near USD 15,707 per line per month, and full funding of the launch.</li>
+    </ul>
+    <h3>Delper Aegis cost build-up (program Years 1 to 4, shown as group Years 7 to 10)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>USD</th><th class="num">Y7</th><th class="num">Y8</th><th class="num">Y9</th><th class="num">Y10</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>FDE staffing (at cost, passed through in the FDE charge)</td><td class="num">$1.97B</td><td class="num">$9.35B</td><td class="num">$13.34B</td><td class="num">$17.02B</td></tr>
+          <tr><td>Operations and compliance</td><td class="num">$33.40M</td><td class="num">$33.40M</td><td class="num">$33.40M</td><td class="num">$33.40M</td></tr>
+          <tr><td>Firmware maintenance (midpoint)</td><td class="num">$4.40M</td><td class="num">$4.40M</td><td class="num">$4.40M</td><td class="num">$4.40M</td></tr>
+          <tr><td>Cloud hosting (assumed USD 100 per line per month)</td><td class="num">$30.00M</td><td class="num">$142.47M</td><td class="num">$203.19M</td><td class="num">$259.37M</td></tr>
+          <tr><td>Hardware cost of sales (units sold)</td><td class="num">$68.35M</td><td class="num">$205.05M</td><td class="num">$341.75M</td><td class="num">$410.10M</td></tr>
+          <tr><td><strong>Total operating cost</strong></td><td class="num"><strong>$2.10B</strong></td><td class="num"><strong>$9.73B</strong></td><td class="num"><strong>$13.92B</strong></td><td class="num"><strong>$17.73B</strong></td></tr>
+          <tr><td>Revenue</td><td class="num">$5.91B</td><td class="num">$27.64B</td><td class="num">$44.59B</td><td class="num">$62.97B</td></tr>
+          <tr><td>Silicon development (in GK launch advance, not expensed)</td><td class="num">$531.50M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>FDE staffing was already inside the source's cost schedule and is shown separately here. Cloud hosting is not priced in the source, so the USD 100 per line per month rate is an assumption to replace with a quoted rate. Hardware refresh, recruitment, training and overhead are also not priced in the source and are not deducted.</p>
+  </section>
+
+  <section>
+    <h2>Group Revenue, Years 1 to 10</h2>
+    <p>Group revenue is the sum of the three businesses, in USD. Track 1 is take-rate revenue from the Global Trust model. Track B is Delper gross profit, using the base case for Years 1 to 5 and the 1-billion-buyer scenario for Years 6 to 10. Delper Aegis revenue starts in Year 7. Figures are revenue, not profit.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th class="num">Track 1:<br>Global Trust Infra</th>
+            <th class="num">Track B:<br>Retail</th>
+            <th class="num">Delper Aegis</th>
+            <th class="num">Group Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Year 1</td><td class="num">$9.43M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$9.43M</td></tr>
+          <tr><td>Year 2</td><td class="num">$31.66M</td><td class="num">$5.81M</td><td class="num">$0</td><td class="num">$37.47M</td></tr>
+          <tr><td>Year 3</td><td class="num">$91.18M</td><td class="num">$43.60M</td><td class="num">$0</td><td class="num">$134.78M</td></tr>
+          <tr><td>Year 4</td><td class="num">$262.60M</td><td class="num">$174.40M</td><td class="num">$0</td><td class="num">$437.00M</td></tr>
+          <tr><td>Year 5</td><td class="num">$756.31M</td><td class="num">$545.00M</td><td class="num">$0</td><td class="num">$1.30B</td></tr>
+          <tr><td>Year 6</td><td class="num">$2.18B</td><td class="num">$1.45B</td><td class="num">$0</td><td class="num">$3.63B</td></tr>
+          <tr><td>Year 7</td><td class="num">$6.27B</td><td class="num">$3.86B</td><td class="num">$5.91B</td><td class="num">$16.04B</td></tr>
+          <tr><td>Year 8</td><td class="num">$18.07B</td><td class="num">$10.27B</td><td class="num">$27.64B</td><td class="num">$55.98B</td></tr>
+          <tr><td>Year 9</td><td class="num">$52.04B</td><td class="num">$27.31B</td><td class="num">$44.59B</td><td class="num">$123.94B</td></tr>
+          <tr><td>Year 10</td><td class="num">$149.86B</td><td class="num">$72.67B</td><td class="num">$62.97B</td><td class="num">$285.50B</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Track 1 revenue grows from USD 9.43M in Year 1 to $149.86B in Year 10, as capital compounds at 26 turns and 60% of net profit is reinvested. Delper Aegis adds revenue from Year 7, reaching USD 62.97B in Year 10.</p>
+  </section>
+
+  <section>
+    <h2>GK Bharta Cash Flow, Years 1 to 10</h2>
+    <p>This section sets out GK's cash position and the ten-year financial waterfall. GK's cash comes from palm oil income of USD 15.00 Million a year, from 1,000,000 metric tons at USD 15 per ton, and from 40% of after-tax profit paid by each track. Each track reinvests 60% of after-tax profit. In Year 1 GK pays the seed investors USD 8.00 Million and Radiant USD 4.00 Million. Delper Aegis is funded entirely from GK's profit share until it can fund itself. In Year 7 GK advances the USD 1.90 Billion launch from its profit share, and Aegis repays the advance from its own Year 7 after-tax profit of about USD 3.16 Billion. Only the remaining profit is split 40% to GK and 60% reinvested. The advance is repaid in Year 7, so Aegis's payout starts that year. Cash stays positive in every year under the revised model, so no fresh investment is required. Figures are in USD.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">$487.00B</div><div class="lbl">Gross revenue, Years 1 to 10</div></div>
+      <div class="stat"><div class="num">$243.63B</div><div class="lbl">Net profit, Years 1 to 10</div></div>
+      <div class="stat"><div class="num">$96.69B</div><div class="lbl">GK Bharta 40% payout</div></div>
+      <div class="stat"><div class="num">$145.04B</div><div class="lbl">Reinvested growth capital (60%)</div></div>
+    </div>
+    <h3>GK Bharta cash position</h3>
+    <div class="table-wrap">
+      <table>
+                                <thead>
+          <tr>
+            <th>Year</th>
+            <th class="num">Palm Oil Income</th>
+            <th class="num">Investor Buyback</th>
+            <th class="num">Radiant Purchase</th>
+            <th class="num">Aegis Launch Advance</th>
+            <th class="num">Aegis Repaid to GK</th>
+            <th class="num">Track 1 Payout (40%)</th>
+            <th class="num">Track B Payout (40%)</th>
+            <th class="num">Aegis Payout (40%)</th>
+            <th class="num">Net Cash</th>
+            <th class="num">Cumulative</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Year 1</td><td class="num">$15.00M</td><td class="num">($8.00M)</td><td class="num">($4.00M)</td><td class="num">$0</td><td class="num">$0</td><td class="num">$1.88M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$4.88M</td><td class="num">$4.88M</td></tr>
+          <tr><td>Year 2</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$6.31M</td><td class="num">$0.96M</td><td class="num">$0</td><td class="num">$22.27M</td><td class="num">$27.15M</td></tr>
+          <tr><td>Year 3</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$18.16M</td><td class="num">$7.24M</td><td class="num">$0</td><td class="num">$40.40M</td><td class="num">$67.55M</td></tr>
+          <tr><td>Year 4</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$52.31M</td><td class="num">$28.95M</td><td class="num">$0</td><td class="num">$96.26M</td><td class="num">$163.81M</td></tr>
+          <tr><td>Year 5</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$150.66M</td><td class="num">$90.47M</td><td class="num">$0</td><td class="num">$256.13M</td><td class="num">$419.94M</td></tr>
+          <tr><td>Year 6</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$433.90M</td><td class="num">$240.70M</td><td class="num">$0</td><td class="num">$689.60M</td><td class="num">$1.11B</td></tr>
+          <tr><td>Year 7</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">($1.90B)</td><td class="num">$1.90B</td><td class="num">$1.25B</td><td class="num">$640.43M</td><td class="num">$503.83M</td><td class="num">$2.41B</td><td class="num">$3.52B</td></tr>
+          <tr><td>Year 8</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$3.60B</td><td class="num">$1.70B</td><td class="num">$5.95B</td><td class="num">$11.26B</td><td class="num">$14.78B</td></tr>
+          <tr><td>Year 9</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$10.37B</td><td class="num">$4.53B</td><td class="num">$10.18B</td><td class="num">$25.10B</td><td class="num">$39.88B</td></tr>
+          <tr><td>Year 10</td><td class="num">$15.00M</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$29.85B</td><td class="num">$12.06B</td><td class="num">$15.02B</td><td class="num">$56.95B</td><td class="num">$96.83B</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Ten-year consolidated waterfall</h3>
+    <div class="table-wrap">
+      <table>
+                                <thead>
+          <tr>
+            <th>Year</th>
+            <th class="num">Gross Revenue</th>
+            <th class="num">OpEx</th>
+            <th class="num">Income Tax (17%)</th>
+            <th class="num">Net Profit</th>
+            <th class="num">GK Payout (40%)</th>
+            <th class="num">Aegis Advance Repaid to GK</th>
+            <th class="num">Reinvested (60%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Year 1</td><td class="num">$9.43M</td><td class="num">$3.77M</td><td class="num">$0.96M</td><td class="num">$4.70M</td><td class="num">$1.88M</td><td class="num">$0</td><td class="num">$2.82M</td></tr>
+          <tr><td>Year 2</td><td class="num">$37.47M</td><td class="num">$15.57M</td><td class="num">$3.72M</td><td class="num">$18.18M</td><td class="num">$7.27M</td><td class="num">$0</td><td class="num">$10.91M</td></tr>
+          <tr><td>Year 3</td><td class="num">$134.78M</td><td class="num">$58.27M</td><td class="num">$13.01M</td><td class="num">$63.50M</td><td class="num">$25.40M</td><td class="num">$0</td><td class="num">$38.10M</td></tr>
+          <tr><td>Year 4</td><td class="num">$437.00M</td><td class="num">$192.24M</td><td class="num">$41.61M</td><td class="num">$203.15M</td><td class="num">$81.26M</td><td class="num">$0</td><td class="num">$121.89M</td></tr>
+          <tr><td>Year 5</td><td class="num">$1.30B</td><td class="num">$575.02M</td><td class="num">$123.47M</td><td class="num">$602.82M</td><td class="num">$241.13M</td><td class="num">$0</td><td class="num">$361.69M</td></tr>
+          <tr><td>Year 6</td><td class="num">$3.63B</td><td class="num">$1.60B</td><td class="num">$345.43M</td><td class="num">$1.69B</td><td class="num">$674.60M</td><td class="num">$0</td><td class="num">$1.01B</td></tr>
+          <tr><td>Year 7</td><td class="num">$16.04B</td><td class="num">$6.54B</td><td class="num">$1.61B</td><td class="num">$7.88B</td><td class="num">$2.39B</td><td class="num">$1.90B</td><td class="num">$3.59B</td></tr>
+          <tr><td>Year 8</td><td class="num">$55.98B</td><td class="num">$22.09B</td><td class="num">$5.76B</td><td class="num">$28.12B</td><td class="num">$11.25B</td><td class="num">$0</td><td class="num">$16.87B</td></tr>
+          <tr><td>Year 9</td><td class="num">$123.94B</td><td class="num">$48.39B</td><td class="num">$12.84B</td><td class="num">$62.71B</td><td class="num">$25.08B</td><td class="num">$0</td><td class="num">$37.62B</td></tr>
+          <tr><td>Year 10</td><td class="num">$285.50B</td><td class="num">$114.01B</td><td class="num">$29.15B</td><td class="num">$142.34B</td><td class="num">$56.94B</td><td class="num">$0</td><td class="num">$85.40B</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>OpEx is 40% of revenue for Track 1, 50% of revenue for Track B, and the Delper Aegis cost build-up for Delper Aegis, including FDE staffing, cloud hosting and hardware cost of sales. Income tax is 17% of profit before tax in each track.</p>
+    <h3>GK Bharta payout by track, Years 1 to 7</h3>
+    <p>Delper Aegis pays GK nothing before Year 7. By Year 7, the cumulative GK Bharta payout is $3.43B. Track 1 contributes $1.91B of this. The Year 7 Aegis launch advance of $1.90B is repaid to GK in full and is not counted as a payout.</p>
+    <div class="table-wrap">
+      <table>
+                                <thead>
+          <tr>
+            <th>Track</th>
+            <th class="num">Y1</th><th class="num">Y2</th><th class="num">Y3</th><th class="num">Y4</th>
+            <th class="num">Y5</th><th class="num">Y6</th><th class="num">Y7</th>
+            <th class="num">Cumulative</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Track 1: Global Trust Infrastructure</td><td class="num">$1.88M</td><td class="num">$6.31M</td><td class="num">$18.16M</td><td class="num">$52.31M</td><td class="num">$150.66M</td><td class="num">$433.90M</td><td class="num">$1.25B</td><td class="num"><strong>$1.91B</strong></td></tr>
+          <tr><td>Track B: Delper Retail</td><td class="num">$0</td><td class="num">$0.96M</td><td class="num">$7.24M</td><td class="num">$28.95M</td><td class="num">$90.47M</td><td class="num">$240.70M</td><td class="num">$640.43M</td><td class="num"><strong>$1.01B</strong></td></tr>
+          <tr><td>Delper Aegis</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td class="num">$503.83M</td><td class="num"><strong>$503.83M</strong></td></tr>
+          <tr><td><strong>Combined</strong></td><td class="num"><strong>$1.88M</strong></td><td class="num"><strong>$7.27M</strong></td><td class="num"><strong>$25.40M</strong></td><td class="num"><strong>$81.26M</strong></td><td class="num"><strong>$241.13M</strong></td><td class="num"><strong>$674.60M</strong></td><td class="num"><strong>$2.39B</strong></td><td class="num"><strong>$3.43B</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Milestones</h2>
+    <div class="timeline">
+      <div class="milestone">
+        <div class="when">Year 0: Seed round</div>
+        <div class="amount">USD 8.00M</div>
+        <p>Seed investors put USD 4.00M into Track 1 and USD 4.00M into Track B.</p>
+      </div>
+      <div class="milestone">
+        <div class="when">Year 1: Buyback and Radiant</div>
+        <div class="amount">USD 8.00M to investors; USD 4.00M to Radiant</div>
+        <p>GK pays the seed investors for their principal and 40% interest, and acquires Radiant Synage's 60%, bringing GK to 100% of the group.</p>
+      </div>
+      <div class="milestone">
+        <div class="when">Year 2: Track reinvestment</div>
+        <div class="amount">40% paid to GK; 60% reinvested</div>
+        <p>Track 1 and Track B reinvest 60% of after-tax profit each year. Track 1 capital grows at 26 turns a year. GK receives 40% of after-tax profit from each track.</p>
+      </div>
+      <div class="milestone">
+        <div class="when">Year 7: Delper Aegis launch</div>
+        <div class="amount">USD 1.90B funded from GK profit</div>
+        <p>Silicon development and hardware for the initial run of 3,000,000 Delper Guard units. Revenue begins and certification testing runs in Years 7 to 8. Aegis repays GK's launch advance from its Year 7 profit before paying the 40% share.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Financial Summary</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Track 1:<br>Global Consultants</th>
+            <th>Track B:<br>Delper Retail</th>
+            <th class="num">Delper Aegis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Initial Capital</td><td class="ctr">USD 4.00 Million</td><td class="ctr">USD 4.00 Million</td><td class="num">USD 1.90 Billion (Year 7)</td></tr>
+          <tr><td>Funded By</td><td class="ctr">Seed investors</td><td class="ctr">Seed investors</td><td class="num">GK Bharta profit</td></tr>
+          <tr><td>GK Profit Share</td><td class="ctr">40% of after-tax profit each year; 60% reinvested</td><td class="ctr">40% of after-tax profit each year; 60% reinvested</td><td class="num">40% of after-tax profit each year after the launch advance is repaid; 60% reinvested</td></tr>
+          <tr><td>Ownership</td><td class="ctr">GK Bharta 100% from Year 1</td><td class="ctr">GK Bharta 100% from Year 1</td><td class="num">GK Bharta 100%</td></tr>
+          <tr><td>Year 5 Net Profit (model)</td><td class="ctr">$376.64M, 60% reinvested</td><td class="ctr">$226.18M, 60% reinvested</td><td class="num">Not started</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Project Iron Nexus: GK Bharta Bond Purchases from Year 15</h2>
+    <p>Project Iron Nexus is a $40.00 Trillion global trade infrastructure program built over a 15-year construction horizon. GK Bharta takes part by buying program bonds from Year 15, funded from its 40% share of after-tax profit from Track 1, Track B and Delper Aegis. No bond purchases are made before Year 15. The bonds are bought to build a multimodal global supply chain, linking deepwater ports, dedicated rail freight corridors, express highways, air cargo hubs and digital customs systems.</p>
+    <table><thead><tr><th>Item</th><th>130% annual growth</th><th>100% annual growth</th><th>50% annual growth</th></tr></thead><tbody>
+    <tr><td>Bond purchases start</td><td class="ctr">Year 15</td><td class="ctr">Year 15</td><td class="ctr">Year 15</td></tr>
+    <tr><td>GK profit available for bonds in Year 15</td><td class="num">$3.66T</td><td class="num">$1.82T</td><td class="num">$0.43T</td></tr>
+    <tr><td>Cumulative purchases reach $49.00T</td><td class="ctr">Year 18</td><td class="ctr">Year 19</td><td class="ctr">Year 24</td></tr>
+    <tr><td>Share of $49.00T in the Year 15 purchase</td><td class="num">7.5%</td><td class="num">3.7%</td><td class="num">0.9%</td></tr>
+    </tbody></table>
+    <p>Figures from Year 11 onward are projections, not model outputs. They assume revenue grows at the stated rate after Year 10, capped at 70% of world nominal GDP ($126.3 Trillion in 2026, growing 4% a year), and a 19.9% GK share of revenue. The Years 1 to 10 profit of $96.69B is not used for bond purchases under this schedule.</p>
+  </section>
+
+</main>
+
+<footer>
+    <p>Links</p>
+    <ul>
+      <li><a href="https://gkbharta44-code.github.io/Delper-Global-Trust-Layer/">Delper Global Consultants</a></li>
+      <li><a href="https://gkbharta44-code.github.io/Pay-Back-Plan-/">Pay Back Plan</a></li>
+      <li><a href="https://gkbharta44-code.github.io/Radiant-/">Radiant Valuation</a></li>
+      <li><a href="https://gkbharta44-code.github.io/Group-Pitch-Deck-/#6" style="text-decoration:underline">Group Pitch Deck</a></li>
+          <li><a href="https://gkbharta44-code.github.io/Delper-Retail-/">Delper Global Retail</a></li>
+      <li><a href="https://drive.google.com/file/d/11X7g4KefXes5Ba3yEMv9GrLlXks7YtsT/view?usp=drivesdk">Audio Overview</a></li>
+      <li><a href="https://gkbharta44-code.github.io/Govt-Bonds-Purchase-/">Govt Bonds Purchase</a></li>
+      <li><a href="https://delpertoken.com" style="text-decoration:underline">Delper Token within the ecosystem as a medium of exchange from year 7</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
