@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+   Delper Group Executive Summary Designed for ESG and SDG Alignment
+  </title>
+<style>
+   :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --text: #1d2330;
+    --muted: #5b6372;
+    --accent: #1f4e79;
+    --accent-soft: #e8f0f8;
+    --border: #d9dee7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151c;
+      --surface: #1a1f2a;
+      --text: #e6e9f0;
+      --muted: #9aa3b5;
+      --accent: #8ab8e6;
+      --accent-soft: #223246;
+      --border: #2e3645;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12151c;
+    --surface: #1a1f2a;
+    --text: #e6e9f0;
+    --muted: #9aa3b5;
+    --accent: #8ab8e6;
+    --accent-soft: #223246;
+    --border: #2e3645;
+  }
+  :root { box-sizing: border-box; color-scheme: light dark; }
+  *, *::before, *::after { box-sizing: inherit; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  header.doc-header {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--accent);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+  }
+  header.doc-header h1 {
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+  }
+  header.doc-header h2 {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .key-facts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .key-facts li {
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 8px 12px;
+  }
+  .key-facts li strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+  section.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 26px;
+    margin-bottom: 20px;
+  }
+  section.card h3 {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+  h4 {
+    margin: 18px 0 8px;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  ul, ol { padding-left: 22px; margin: 8px 0; }
+  li { margin-bottom: 8px; }
+  section.card p, section.card li, .callout p, .callout li,
+  header.doc-header h2,
+  section.card h3, section.card h4, .callout h4 {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  header.doc-header h1 {
+    text-align: center;
+  }
+  pre.flow {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 12px 0;
+    color: var(--text);
+  }
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 12px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  tr.total td {
+    font-weight: 700;
+    background: var(--accent-soft);
+  }
+  .note {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 8px 0 0;
+  }
+
+  /* 22-year cash flow (Section 9) */
+  .cf22 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 14px 0; }
+  .cf22 .card { background: var(--accent-soft); border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+  .cf22 .card .k { font-size: 0.8rem; color: var(--muted); }
+  .cf22 .card .v { font-size: 1.25rem; font-weight: 700; margin-top: 2px; color: var(--accent); }
+  .cf22 .card .n { font-size: 0.8rem; color: var(--muted); }
+  .cf22 .wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+  .cf22 table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 0.85rem; }
+  .cf22 th, .cf22 td { padding: 7px 8px; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; vertical-align: middle; }
+  .cf22 th { background: var(--accent-soft); color: var(--accent); font-weight: 600; position: sticky; top: 0; }
+  .cf22 td.l, .cf22 th.l { text-align: left; white-space: normal; min-width: 170px; }
+  .cf22 tr.t td { font-weight: 700; background: var(--accent-soft); }
+  .cf22 .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.8rem; color: var(--muted); margin: 6px 0; }
+  .cf22 .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+  .cf22 .chart { border: 1px solid var(--border); border-radius: 8px; padding: 10px; background: var(--surface); }
+  .cf22 svg .ax { fill: var(--muted); }
+  .cf22 svg .grid { stroke: var(--border); }
+  .cf22 ul { padding-left: 22px; margin: 8px 0; }
+  .cf22 li { margin-bottom: 6px; }
+  .rt-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 14px 0; }
+  .rt-card { background: var(--accent-soft); border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+  .rt-card .k { font-size: 0.8rem; color: var(--muted); }
+  .rt-card .v { font-size: 1.25rem; font-weight: 700; margin-top: 2px; color: var(--accent); }
+  .rt-card .n { font-size: 0.8rem; color: var(--muted); }
+  .callout { background: var(--accent-soft); border-left: 4px solid var(--accent); border-radius: 6px; padding: 12px 16px; margin: 14px 0; font-size: 0.92rem; }
+  .callout ul { margin: 6px 0 0; }
+  .key-facts li,
+  .rt-card,
+  .cf22 .card,
+  .callout {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  footer {
+    margin-top: 32px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+<main>
+<header class="doc-header">
+<h1>
+     Delper Group Executive Summary Designed for ESG and SDG Alignment
+    </h1>
+<h2>
+     Consolidated Master Investment Proposal, Integrated: Blueprint Alignment, Debt Schedule and 21-Year Ledger
+    </h2>
+<ul class="key-facts">
+<li>
+<strong>
+       Total Capital Ask:
+      </strong>
+      USD 8.00 Million
+     </li>
+<li>
+<strong>
+       Implied Post-Money Valuation:
+      </strong>
+      USD 20.00 Million
+     </li>
+<li>
+<strong>
+       Radiant Synage Contribution:
+      </strong>
+      USD 12.00 Million (IP, Banking Infrastructure, &amp; Core Lines)
+     </li>
+<li>
+<strong>
+       Corporate Structure:
+      </strong>
+      Consolidated Holding Company (Top-Co) retaining 100% downstream control
+     </li>
+<li>
+<strong>
+       Equity Split:
+      </strong>
+      60% Radiant Synage (Majority Control) / 40% Investor (Significant Minority Stake)
+     </li>
+<li>
+<strong>
+       Parent Programme:
+      </strong>
+      Delper Integrated, USD 96.00 Trillion integrated capital over a 15-year build
+     </li>
+<li><strong>
+       Debt Retirement (Base Case):
+      </strong> Iron Nexus Year 18; Bharat Year 20 (9% interest on both series, including bulk and retail repayments)</li>
+<li><strong>ESG and SDG Alignment:</strong> Mapped to 10 UN Sustainable Development Goals and the E, S and G pillars; see Section 11</li>
+</ul>
+</header>
+<section class="card">
+<h3>
+     1. The Global Problem &amp; Macro Inefficiencies
+    </h3>
+<ul>
+<li>
+<strong>
+       The Global Logistics Bottleneck:
+      </strong>
+      Total global logistics spending commands between
+      <strong>
+       $11 Trillion and $13 Trillion annually
+      </strong>
+      , crippled by fragmented infrastructure and structural delays.
+     </li>
+<li>
+<strong>
+       The $800 Billion Administrative Drain:
+      </strong>
+      Cross-border friction, manual customs compliance, and port demurrage waste up to
+      <strong>
+       $800 Billion
+      </strong>
+      in economic value each year.
+     </li>
+<li>
+<strong>
+       Physical Sourcing Vulnerabilities:
+      </strong>
+      Industrial supply chains face severe cyber threats on legacy Operational Technology (OT), combined with a global shortage of qualified cyber-physical engineering talent.
+     </li>
+<li>
+<strong>
+       Digital Commerce Vulnerabilities:
+      </strong>
+      Global B2B and retail e-commerce networks lose massive volumes to counterfeit goods, phantom inventory, and upfront capital exposure without independent quality validation.
+     </li>
+</ul>
+</section>
+<section class="card">
+<h3>
+     2. The Integrated Solution: Four Initiatives, One Ledger
+    </h3>
+<p>
+     Delper Integrated merges four initiatives into a single economic engine, operating exclusively via the 100% fiat-backed ERC-20 Delper Token:
+    </p>
+<ul>
+<li>
+<strong>
+       Project Iron Nexus ($40.00 Trillion):
+      </strong>
+      A global multimodal transport grid linking deepwater ports, dedicated electrified rail corridors, express highways, and high-velocity air cargo hubs. Rail freight is designed to cut transport energy use by 60%.
+     </li>
+<li>
+<strong>
+       Project Make in India 🇮🇳 ($56.00 Trillion):
+      </strong>
+      A coastal software-defined manufacturing matrix in India. Approximately 560,000 dark factories on 1-acre coastal footprints are powered by 840 GW of dedicated zero-carbon nuclear baseload. Across a 7,500 km coastal corridor, these factories are projected to capture 28% of the world's physical manufacturing value-add. At 2024 world levels this is an after-tax profit of about $4.71 trillion per year, which is repaid to bondholders from the pooled net profit. Bharat starts after Iron Nexus is operative in Year 15: its profit begins in Year 19 and reaches full scale in Year 27.
+     </li>
+<li>
+<strong>
+       Delper Aegis ($247.7 Billion ARR):
+      </strong>
+      An enterprise-tier industrial cybersecurity layer. Each production line sits behind an inline Delper Guard firewall targeting IEC 62443 Security Level 4 (SL-4), with a physical write-lock that blocks remote programming exploits.
+     </li>
+<li>
+<strong>
+       Delper Global Trust Infrastructure:
+      </strong>
+      A buyer-first verified sourcing platform. Track A (Bulk) carries a 15.184% fixed transaction rate, and Track B (Retail) carries 24.2%. Both run on a 14-day settlement cycle.
+     </li>
+</ul>
+<h4>
+     Deployment Curve
+    </h4>
+<pre class="flow">[Phase 1: Years 1-3]    ──&gt; Digital AI Customs Gateways &amp; Aegis 28nm/65nm Nodes Live (hardware); Aegis Revenue from Year 7; Track A &amp; Track B Launch
+                                ↳ Insulated by a 12-Month 100% Principal Exit Pipe (Section 5)
+
+[Phase 2: Years 4-7]    ──&gt; Coastal Automated Seaports Open; First 50,000 Factories Engaged
+
+[Phase 3: Years 8-11]   ──&gt; Electrified Rail DFCs &amp; Inland Dry Ports Interlock; 300,000 Factories Active
+
+[Phase 4: Years 12-15]  ──&gt; Air Cargo Hubs Complete; 560,000 Factories / 840 GW Nuclear at 100% Scale</pre>
+<h4>
+     Human Capital &amp; Cyber-Physical Defence
+    </h4>
+<ul>
+<li>
+<strong>
+       560,000 Forward Deployed Engineers (FDEs) per year:
+      </strong>
+      Each dark factory hub runs 7 FDEs for 24/7/365 monitoring across three 8-hour shifts. Training runs through a 12-month, online, credit-bearing Post-Graduate Advanced Diploma in Forward Deployed Engineering and Cyber-Physical Security, delivered via UVCE, Bangalore University, and scales to 2,147 physical hubs by Year 3.
+     </li>
+<li>
+<strong>
+       Coastal Defence Umbrella:
+      </strong>
+      The Indian Navy enforces a Maritime Domain Awareness bubble. Mid-tier lanes are covered by BrahMos batteries, and perimeters are protected by the Central Industrial Security Force (CISF) with anti-drone interceptor domes and air-gapped private 5G cores.
+     </li>
+</ul>
+</section>
+<section class="card">
+<h3>
+     3. Integrated Capital Architecture: $96.00 Trillion
+    </h3>
+<p>
+     Total capital required is
+     <strong>
+      $96.00 Trillion
+     </strong>
+     , ring-fenced across eight asset layers over a 15-year construction horizon, funded at
+     <strong>
+      $6.40 Trillion per year
+     </strong>
+     .
+    </p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+         Asset Layer
+        </th>
+<th class="num">
+         Amount
+        </th>
+<th class="num">
+         Share
+        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+         Kinetic Muscle &amp; Mechatronics Floor
+        </td>
+<td class="num">
+         $27.50T
+        </td>
+<td class="num">
+         28.6%
+        </td>
+</tr>
+<tr>
+<td>
+         Working Capital Liquidity Buffer
+        </td>
+<td class="num">
+         $22.45T
+        </td>
+<td class="num">
+         23.4%
+        </td>
+</tr>
+<tr>
+<td>
+         Dedicated Rail Freight Corridors
+        </td>
+<td class="num">
+         $14.00T
+        </td>
+<td class="num">
+         14.6%
+        </td>
+</tr>
+<tr>
+<td>
+         Automated Seaports &amp; Mega-Berths
+        </td>
+<td class="num">
+         $10.00T
+        </td>
+<td class="num">
+         10.4%
+        </td>
+</tr>
+<tr>
+<td>
+         Express Highways &amp; Inland Dry Ports
+        </td>
+<td class="num">
+         $9.00T
+        </td>
+<td class="num">
+         9.4%
+        </td>
+</tr>
+<tr>
+<td>
+         Coastal Nuclear &amp; Desalination Infrastructure
+        </td>
+<td class="num">
+         $4.25T
+        </td>
+<td class="num">
+         4.4%
+        </td>
+</tr>
+<tr>
+<td>
+         Digital Systems, AI Customs &amp; Aegis Hardware
+        </td>
+<td class="num">
+         $5.80T
+        </td>
+<td class="num">
+         6.0%
+        </td>
+</tr>
+<tr>
+<td>
+         High-Velocity Air Cargo Hubs
+        </td>
+<td class="num">
+         $3.00T
+        </td>
+<td class="num">
+         3.1%
+        </td>
+</tr>
+<tr class="total">
+<td>
+         Total Outflow
+        </td>
+<td class="num">
+         $96.00T
+        </td>
+<td class="num">
+         100%
+        </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="note">
+     The $96.00 Trillion splits into Project Iron Nexus ($40.00 Trillion) and Project Make in India 🇮🇳 ($56.00 Trillion).
+    </p>
+<p>
+<strong>
+      Total Outflow:
+     </strong>
+<strong>
+      $96.00 Trillion
+     </strong>
+     over the 15-year build, equal to the sum of the eight asset layers above ($6.40 Trillion per year).
+    </p>
+<h4>
+     Investment and Pool Contribution by Stream
+    </h4>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+         Stream
+        </th>
+<th>
+         Investment
+        </th>
+<th>
+         Contribution to Pool
+        </th>
+<th>
+         Repayment
+        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>
+          Bulk (Track A)
+         </strong>
+</td>
+<td>
+         $4.00M of investor's $8.00M (business process, core systems, escrow margin)
+        </td>
+<td>
+         15.184% fee on GMV; 26 turns a year from Year 2; 6.0% spread on asset-backed facilities
+        </td>
+<td>
+         From pooled net profit
+        </td>
+</tr>
+<tr>
+<td>
+<strong>
+          Retail (Track B)
+         </strong>
+</td>
+<td>
+         $4.00M of investor's $8.00M (engineering, 3PQC, legal and licensing); balance unallocated
+        </td>
+<td>
+         24.2% gross profit per order
+        </td>
+<td>
+         From pooled net profit
+        </td>
+</tr>
+<tr>
+<td>
+<strong>
+          Aegis
+         </strong>
+</td>
+<td>
+         Part of the $5.80T digital systems and Aegis hardware line; no separate figure
+        </td>
+<td>
+         $247.7B base ARR at full scale, starting in Year 7 and ramping linearly to full scale by Year 15; 68% to 82.3% hardware margins; 20% staffing markup
+        </td>
+<td>
+         From pooled net profit
+        </td>
+</tr>
+<tr>
+<td>
+<strong>
+          Multimodal (Project Iron Nexus)
+         </strong>
+</td>
+<td>
+         $40.00T
+        </td>
+<td>
+         $3.71T net toll per year at full scale ($3.98T gross less $0.27T O&amp;M)
+        </td>
+<td>
+         From pooled net profit; $41.16T of bonds at 9% after the Year 15 buyback (Section 8)
+        </td>
+</tr>
+<tr>
+<td>
+<strong>
+          Make in India 🇮🇳
+         </strong>
+</td>
+<td>
+         $56.00T
+        </td>
+<td>
+         $0.42T per year from Year 19, rising to $4.71T at full scale; 60% reserved, 40% to pool
+        </td>
+<td>
+         From pooled net profit; $56.00T of bonds at 9%
+        </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="note">
+     Repayment of both bond series is from the shared net profit pool, Iron Nexus first and then Bharat.
+    </p>
+<h4>
+     Funding the Total Outflow
+    </h4>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+         Source
+        </th>
+<th class="num">
+         Amount
+        </th>
+<th class="num">
+         Share
+        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+         Iron Nexus bonds (principal)
+        </td>
+<td class="num">
+         $40.00T
+        </td>
+<td class="num">
+         41.7%
+        </td>
+</tr>
+<tr>
+<td>
+         Bharat bonds (principal)
+        </td>
+<td class="num">
+         $56.00T
+        </td>
+<td class="num">
+         58.3%
+        </td>
+</tr>
+<tr class="total">
+<td>
+         Total Outflow, funded by bonds
+        </td>
+<td class="num">
+         $96.00T
+        </td>
+<td class="num">
+         100%
+        </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="note">
+     The $96.00T outflow is funded entirely by bonds. Iron Nexus bonds carry a further $6.59T of capitalised construction interest, bringing their balance to $46.59T before repayments. bulk (Track 1) and retail (Track 2) repayments in Years 1 to 14 reduce it to $43.12T at Year 15 (Section 8). Both series are retired from pooled net profit.
+    </p>
+</section>
+<section class="card">
+<h3>
+     4. Immediate Capital Ask &amp; Strategic Use of Funds
+    </h3>
+<p>
+     The
+     <strong>
+      USD 8.00 Million Investor Cash
+     </strong>
+     is strictly ring-fenced across two parallel operational allocations to balance immediate scale with long-term infrastructure staging:
+    </p>
+<h4>
+     Track A: Global Consultants Setup ($4.00M)
+    </h4>
+<ul>
+<li>
+<strong>
+       Business Process Capital [$0.86M]:
+      </strong>
+      Spent on SAP BTP and Signavio process mapping middleware to establish the core GMV base.
+     </li>
+<li>
+<strong>
+       Core Systems Setup [$0.54M]:
+      </strong>
+      Spent on SAP S/4HANA Core ERP implementation ($0.39M) and independent SGS quality control webhook linkages ($0.15M).
+     </li>
+<li>
+<strong>
+       Pre-Shipment Escrow Margin [$2.60M]:
+      </strong>
+      Maintained strictly as a revolving, recycled liquidity margin on consecutive Free-On-Board (FOB) payments.
+     </li>
+</ul>
+<h4>
+     Track B: Global Retail India Pilot ($4.00M)
+    </h4>
+<ul>
+<li>
+<strong>
+       Core Team &amp; Engineering [$1.60M]:
+      </strong>
+      Distributed across minimal platform engineering, threat ingestion, and verification ledger coding.
+     </li>
+<li>
+<strong>
+       3PQC Infrastructure [$0.80M]:
+      </strong>
+      Allocation for partner onboarding, structural audits, and independent quality insurance.
+     </li>
+<li>
+<strong>
+       Escrow, Legal, &amp; Licensing [$0.50M]:
+      </strong>
+      Set up for bank partner compliance, cross-border contract structuring, and regulatory clearings.
+     </li>
+<li>
+<strong>
+       Operational Contingency [$0.40M]:
+      </strong>
+      Capital cushion to insulate early processing loops against transaction latency.
+     </li>
+<li>
+<strong>
+       Supplier Real-Time Bidding (RTB) Vetting [$0.40M]:
+      </strong>
+      Dedicated to factory onboarding and vendor verification cycles.
+     </li>
+<li>
+<strong>
+       Cloud &amp; Integration Infrastructure [$0.30M]:
+      </strong>
+      Earmarked for Shopify, WooCommerce, and ONDC buyer endpoint connectors.
+     </li>
+</ul>
+</section>
+<section class="card">
+<h3>
+     5. Investor Risk Mitigation: The 12-Month Exit Pipe
+    </h3>
+<p>
+     To eliminate investor downside, the USD 8.00 Million cash commitment is insulated by a parallel commodity monetization facility that operates independently of the core technology tracks:
+    </p>
+<ul>
+<li>
+<strong>
+       The Isolated Financial Vehicle for GK Bharta:
+      </strong>
+      Routes
+      <strong>
+       1,000,000 metric tons of bulk palm oil annually
+      </strong>
+      via Irrevocable At-Sight Letters of Credit (LCs).
+     </li>
+<li>
+<strong>
+       The Income Generation Profile for GK Bharta:
+      </strong>
+      Captures a commission yield from the palm oil seller for sourcing the buyer, generating
+      <strong>
+       USD 15.00 Million of post-tax income
+      </strong>
+      within the first 12 months.
+     </li>
+<li>
+<strong>
+       100% Principal Return:
+      </strong>
+      Palm oil revenues fund the Year 1 retirement of the USD 8.00 Million investor loan (including 11% interest, totaling
+      <strong>
+       USD 8.88 Million
+      </strong>
+      ) and the USD 4.00 Million Radiant payment for GK Bharta to own 100% of Delper Group.
+     </li>
+<li>
+<strong>
+       Zero-Cost Equity Retention:
+      </strong>
+      Net cash risk to the investor drops to
+      <strong>
+       USD 0.00
+      </strong>
+      at Month 12, while both the investor and Radiant Synage sell their 40% and 60% equity stakes to GK Bharta.
+     </li>
+</ul>
+</section>
+<section class="card">
+<h3>
+     6. Primary Unit Economics &amp; Revenue Engines
+    </h3>
+<h4>
+     Track A: Bulk Enterprise Trade
+    </h4>
+<ul>
+<li>
+<strong>
+       Fixed Transaction Rate:
+      </strong>
+      Captures a mandatory
+      <strong>
+       15.184% fee
+      </strong>
+      on total Gross Merchandise Value (GMV).
+     </li>
+<li>
+<strong>
+       High-Velocity Turnover:
+      </strong>
+      Achieves
+      <strong>
+       26 capital turns per year
+      </strong>
+      via a 14-day settlement cycle from Year 2 onward (17.6 turns in Year 1).
+     </li>
+<li>
+<strong>
+       Liquidity Spread:
+      </strong>
+      Generates a
+      <strong>
+       6.0% net annual spread
+      </strong>
+      on asset-secured capital facilities using bonded cargo as collateral.
+     </li>
+</ul>
+<h4>
+     Track B: Verified Digital Marketplace
+    </h4>
+<ul>
+<li>
+<strong>
+       E-Commerce Take Rate:
+      </strong>
+      Captures
+      <strong>
+       24.2% gross profit per order
+      </strong>
+      ($72.67 on a standard $300 customer checkout).
+     </li>
+<li>
+<strong>
+       Real-Time Bidding (RTB) Model:
+      </strong>
+      Buyers search free; pre-vetted factories prepay RTB and physical Third-Party Quality Control (3PQC) costs at actual cost, preventing platform overhead.
+     </li>
+<li>
+<strong>
+       Deducted Commissions:
+      </strong>
+      Platform commission and lead generation costs are deducted directly from vendor escrow balances only upon consumer satisfaction sign-off. Note that this is distinct from the 2% Transact Tax in Section 7, which is a protocol-level tax on token mint and burn.
+     </li>
+</ul>
+<p>
+     Tracks 1 and 2 reinvest 60% of after-tax profit after Year 1. The remaining 40% repays the $96 trillion loan from Year 2. GK Bharta receives no profit share until the loan is fully repaid; from then on it receives 100% of net profit.
+    </p>
+<h4>
+     Delper Aegis: Factory-as-a-Service (FaaS)
+    </h4>
+<ul>
+<li>
+<strong>
+       Platform ARR:
+      </strong>
+      Delper Aegis carries a base ARR of
+      <strong>
+       $247.7 Billion
+      </strong>
+      at full scale, deployed through 1,963,334 Delper Guard inline hardware units across SME and enterprise tiers.
+     </li>
+<li>
+<strong>
+       Tiered Hardware Margins:
+      </strong>
+      Targets
+      <strong>
+       68% gross margin
+      </strong>
+      on SME chips and
+      <strong>
+       82.3% gross margin
+      </strong>
+      on advanced 5nm dark factory chips.
+     </li>
+<li>
+<strong>
+       Insulated Staffing Markup:
+      </strong>
+      Pass-through engineer costs are absorbed by the factory customer, while Delper retains a
+      <strong>
+       20% clean profit markup
+      </strong>
+      on all field operations.
+     </li>
+</ul>
+</section>
+<section class="card" id="retail-financials">
+<h3>
+     6A. Delper Global Retail (Track B) Financials
+    </h3>
+<p>
+     This section adds the financials of Delper Global Retail from the
+     <strong>
+      Global Verified-Commerce Trust Layer
+     </strong>
+     executive summary. Retail is Track B, funded by
+     <strong>
+      $4.00M
+     </strong>
+     of the investor's $8.00M. Its model ramps from
+     <strong>
+      1.2 billion buyers in Year 1
+     </strong>
+     to
+     <strong>
+      6.0 billion in Year 5
+     </strong>
+     . Figures are in USD billions unless stated.
+    </p>
+<div class="rt-cards">
+<div class="rt-card">
+<div class="k">
+       Year 5 gross profit
+      </div>
+<div class="v">
+       $872.04B
+      </div>
+<div class="n">
+       6.0B buyers, flat to Year 21
+      </div>
+</div>
+<div class="rt-card">
+<div class="k">
+       Year 5 net profit
+      </div>
+<div class="v">
+       $361.90B
+      </div>
+<div class="n">
+       41.5% of gross profit
+      </div>
+</div>
+<div class="rt-card">
+<div class="k">
+       Gross profit per $300 order
+      </div>
+<div class="v">
+       $72.67
+      </div>
+<div class="n">
+       24.22% of price
+      </div>
+</div>
+<div class="rt-card">
+<div class="k">
+       Loan repaid, Years 1 to 21
+      </div>
+<div class="v">
+       $6,007.48B
+      </div>
+<div class="n">
+       About 6.26% of $96T
+      </div>
+</div>
+</div>
+<h4>21-year retail cash flow ($B)</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>Year</th><th class="num">Buyers (B)</th><th class="num">Gross profit ($B)</th><th class="num">Net profit ($B)</th><th class="num">Reinvested, 60% ($B)</th><th class="num">Loan repaid ($B)</th><th class="num">Cumulative repaid ($B)</th><th class="num">Loan balance remaining ($B)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="num">1.2</td><td class="num">174.41</td><td class="num">72.38</td><td class="num">43.43</td><td class="num">28.95</td><td class="num">28.95</td><td class="num">95,971.05</td></tr>
+<tr><td>2</td><td class="num">2.4</td><td class="num">348.82</td><td class="num">144.76</td><td class="num">86.86</td><td class="num">57.90</td><td class="num">86.86</td><td class="num">95,913.14</td></tr>
+<tr><td>3</td><td class="num">3.6</td><td class="num">523.22</td><td class="num">217.14</td><td class="num">130.28</td><td class="num">86.86</td><td class="num">173.71</td><td class="num">95,826.29</td></tr>
+<tr><td>4</td><td class="num">4.8</td><td class="num">697.63</td><td class="num">289.52</td><td class="num">173.71</td><td class="num">115.81</td><td class="num">289.52</td><td class="num">95,710.48</td></tr>
+<tr><td>5</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">217.14</td><td class="num">144.76</td><td class="num">434.28</td><td class="num">95,565.72</td></tr>
+<tr><td>6</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">217.14</td><td class="num">144.76</td><td class="num">579.03</td><td class="num">95,420.97</td></tr>
+<tr><td>7</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">940.93</td><td class="num">95,059.07</td></tr>
+<tr><td>8</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">1,302.83</td><td class="num">94,697.17</td></tr>
+<tr><td>9</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">1,664.72</td><td class="num">94,335.28</td></tr>
+<tr><td>10</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">2,026.62</td><td class="num">93,973.38</td></tr>
+<tr><td>11</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">2,388.52</td><td class="num">93,611.48</td></tr>
+<tr><td>12</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">2,750.41</td><td class="num">93,249.59</td></tr>
+<tr><td>13</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">3,112.31</td><td class="num">92,887.69</td></tr>
+<tr><td>14</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">3,474.21</td><td class="num">92,525.79</td></tr>
+<tr><td>15</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">3,836.10</td><td class="num">92,163.90</td></tr>
+<tr><td>16</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">4,198.00</td><td class="num">91,802.00</td></tr>
+<tr><td>17</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">4,559.90</td><td class="num">91,440.10</td></tr>
+<tr><td>18</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">4,921.79</td><td class="num">91,078.21</td></tr>
+<tr><td>19</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">5,283.69</td><td class="num">90,716.31</td></tr>
+<tr><td>20</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">5,645.59</td><td class="num">90,354.41</td></tr>
+<tr><td>21</td><td class="num">6.0</td><td class="num">872.04</td><td class="num">361.90</td><td class="num">0.00</td><td class="num">361.90</td><td class="num">6,007.48</td><td class="num">89,992.52</td></tr>
+</tbody>
+</table></div>
+<p class="note">
+     Years 1 to 6: 60% of net profit is reinvested into retail working capital and 40% repays the loan. From Year 7, 100% of net profit repays the loan. Gross profit is flat from Year 5 and stays flat to Year 21. Year 1 is the model's ramp year and is not the India pilot, which is a separate 300 to 500 order test.
+    </p>
+<h4>
+     Unit economics per $300 order
+    </h4>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+         Item
+        </th>
+<th class="num">
+         Per order
+        </th>
+<th>
+         Basis
+        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+         Customer price (all-inclusive)
+        </td>
+<td class="num">
+         $300.00
+        </td>
+<td>
+         Two orders a year, $600 per buyer
+        </td>
+</tr>
+<tr>
+<td>
+         Seller commission (2%)
+        </td>
+<td class="num">
+         $6.00
+        </td>
+<td>
+         Deducted at escrow release
+        </td>
+</tr>
+<tr>
+<td>
+         Lead generation (19 revenue streams)
+        </td>
+<td class="num">
+         $66.67
+        </td>
+<td>
+         Deducted from sale proceeds through RTB
+        </td>
+</tr>
+<tr class="total">
+<td>
+         Gross profit per order
+        </td>
+<td class="num">
+         $72.67
+        </td>
+<td>
+         24.22% of price; $145.34 per buyer a year
+        </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout">
+<p>
+<strong>
+       Points to resolve before the group figures are relied on
+      </strong>
+</p>
+<ul>
+<li>
+<strong>
+        Scope:
+       </strong>
+       6.0 billion buyers by Year 5 requires a global rollout. India has about 1.43 billion people, and the seed and pilot cover India only.
+      </li>
+<li>
+<strong>
+        Funding:
+       </strong>
+       the ramp needs far more than the $4.00M seed in Years 1 to 5. The source assumes no further round, so growth is funded from reinvested profit. This should be tested against the ramp's costs.
+      </li>
+<li><strong>
+        Debt schedule:
+       </strong> now included in Sections 8 and 9: bulk (Track 1) and retail (Track 2) repayments. Retail is the Global Retail model. Bulk is GMV-based and does not overlap with retail.</li>
+<li><strong>
+        Interest:
+       </strong> the Global Retail balance excludes 9% bond interest. Sections 8 and 9 apply interest to the bonds.</li>
+<li>
+<strong>
+        Costs:
+       </strong>
+       gross profit is before the model's 50% expense and 17% tax assumptions, which have not been replaced with pilot actuals.
+      </li>
+</ul>
+</div>
+<p class="note">
+     Source: Global Verified-Commerce Trust Layer executive summary, sections "Rebuilt five-year forecast", "Loan repayment, Years 1 to 21" and "Group retail division: Track B financials". These are model outputs under stated assumptions, not forecasts, and have not been independently verified.
+    </p>
+</section>
+<section class="card">
+<h3>
+     7. Macro Financing: Project Iron Nexus &amp; Make in India 🇮🇳
+    </h3>
+<p>
+     The $96.00 Trillion programme is financed through the Delper Token economy, a supranational debt wrapper, and a fixed set of annual inflows:
+    </p>
+<h4>
+     The AAA Supranational Credit Enhancement Wrapper
+    </h4>
+<ul>
+<li>
+<strong>
+       The Deflationary Mechanism:
+      </strong>
+      Standard emerging-market debt pricing at 9.00% would compound construction liabilities far beyond the blueprint's launch balance.
+     </li>
+<li>
+<strong>
+       Supranational Joint Guarantees:
+      </strong>
+      The
+      <strong>
+       World Bank Group (IBRD)
+      </strong>
+      and the
+      <strong>
+       Asian Infrastructure Investment Bank (AIIB)
+      </strong>
+      co-back an unconditional AAA guarantee over the construction tranches.
+     </li>
+<li>
+<strong>
+       Yield Compression:
+      </strong>
+      The model keeps the 9.00% rate on both bond series, so the wrapper compression to
+      <strong>
+       4.75%–5.50%
+      </strong>
+      is not applied. Final launch debt at Year 15 is
+      <strong>$43.12 Trillion</strong>
+      , after Years 1 to 14 repayments from bulk (Track 1) and retail (Track 2), including capitalized construction interest, refinanced as a 10-year bond.
+     </li>
+</ul>
+<h4>
+     The Macro Toll Engine
+    </h4>
+<p>
+     Once fully operational in Year 15, the network collects an optimized
+     <strong>
+      $3.98 Trillion gross annual toll
+     </strong>
+     . After a
+     <strong>
+      $270.27 Billion annual O&amp;M budget
+     </strong>
+     , this delivers
+     <strong>
+      $3.71 Trillion in net operational toll cash flow
+     </strong>
+     :
+    </p>
+<ul>
+<li>
+<strong>
+       Maritime Channels (35%):
+      </strong>
+      $1.39 Trillion per annum via automated TEU handling and deepwater berth access.
+     </li>
+<li>
+<strong>
+       Rail &amp; Highway Tariffs (32%):
+      </strong>
+      $1.28 Trillion per annum ($0.15/km truck tariffs; $0.02/cargo-ton-km rail tariffs).
+     </li>
+<li>
+<strong>
+       Digital AI Customs Platforms (18%):
+      </strong>
+      $0.72 Trillion per annum generated from automated declaration processing fees.
+     </li>
+<li>
+<strong>
+       Inland Warehousing &amp; Air Hubs (15%):
+      </strong>
+      $0.59 Trillion per annum via climate-controlled staging and smart sorting.
+     </li>
+</ul>
+<h4>
+     Annual Inflow Pipeline (Named Streams)
+    </h4>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+         Source
+        </th>
+<th class="num">
+         Per Year
+        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+         Net Operational System Tolls (Iron Nexus)
+        </td>
+<td class="num">
+         $3.71T
+        </td>
+</tr>
+<tr>
+<td>
+         2% Token Tax Capture (Mint/Burn Layer)
+        </td>
+<td class="num">
+         $0.81T
+        </td>
+</tr>
+<tr>
+<td>
+         Treasury Float Yield (4.00% on $12.11T)
+        </td>
+<td class="num">
+         $0.48T
+        </td>
+</tr>
+<tr>
+<td>
+         Delper Aegis Security Platform Base ARR
+        </td>
+<td class="num">
+         $0.24T
+        </td>
+</tr>
+<tr class="total">
+<td>
+         Named Streams Subtotal
+        </td>
+<td class="num">
+         $5.24T
+        </td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>
+<strong>
+       Permanent Reserve Float:
+      </strong>
+      A $12.11 Trillion fiat reserve held in tier-1 banks at 4.00% returns
+      <strong>
+       $484.40 Billion per year
+      </strong>
+      toward debt retirement during the buyback period.
+     </li>
+<li>
+<strong>
+       2% Transact Tax:
+      </strong>
+      A 1% tax on fiat deposit (buy) and 1% on fiat redemption (sell). On projected volume of $40.37 Trillion per year, this yields
+      <strong>
+       $807.40 Billion annually
+      </strong>
+      .
+     </li>
+</ul>
+</section>
+<section class="card">
+<h3>8. Debt Retirement Schedule</h3>
+<p>At Year 15, construction tranches consolidate into two bond series, both carrying <strong>9% per annum interest</strong> and issued as <strong>10-year bonds</strong>. <strong>Bharat bonds</strong> are <strong>$56.00 Trillion</strong>. <strong>Iron Nexus bonds</strong> start at <strong>$46.59 Trillion</strong> ($40.00 Trillion principal plus $6.59 Trillion of capitalised construction interest). Repayments in Years 1 to 14 from bulk (Track 1) and retail (Track 2) reduce this to <strong>$43.12 Trillion</strong>.</p>
+<p>Iron Nexus is bought back with 40% of Year 15 group inflow, and bulk (Track 1) and retail (Track 2) repayments reduce it from Year 15 on. From Year 16, the pool pays interest on Iron Nexus and then Iron Nexus principal. Bharat interest is capitalised into the Bharat balance while Iron Nexus is outstanding. Once Iron Nexus is cleared, Bharat interest and principal are paid from the pool. Nothing is distributed to GK Bharta until both series are retired.</p>
+<h4>Base Case: 100% Growth Track</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>Year</th><th class="num">Group inflow</th><th class="num">Bulk (Track 1) repaid</th><th class="num">Retail (Track 2) repaid</th><th class="num">Iron Nexus repaid (incl. interest)</th><th class="num">Iron Nexus closing</th><th class="num">Bharat repaid (incl. interest)</th><th class="num">Bharat closing</th></tr></thead>
+<tbody>
+<tr><td>15</td><td class="num">3.980</td><td class="num">-</td><td class="num">0.362</td><td class="num">1.954</td><td class="num">41.162</td><td class="num">-</td><td class="num">56.000</td></tr>
+<tr><td>16</td><td class="num">7.960</td><td class="num">-</td><td class="num">0.362</td><td class="num">8.052</td><td class="num">36.814</td><td class="num">-</td><td class="num">61.040</td></tr>
+<tr><td>17</td><td class="num">15.920</td><td class="num">-</td><td class="num">0.362</td><td class="num">16.012</td><td class="num">24.116</td><td class="num">-</td><td class="num">66.534</td></tr>
+<tr><td>18</td><td class="num">31.840</td><td class="num">-</td><td class="num">0.362</td><td class="num">26.286</td><td class="num">-</td><td class="num">5.646</td><td class="num">66.876</td></tr>
+<tr><td>19</td><td class="num">64.100</td><td class="num">-</td><td class="num">0.362</td><td class="num">-</td><td class="num">-</td><td class="num">64.192</td><td class="num">8.703</td></tr>
+<tr><td>20</td><td class="num">93.295</td><td class="num">-</td><td class="num">0.362</td><td class="num">-</td><td class="num">-</td><td class="num">9.486</td><td class="num">-</td></tr>
+</tbody>
+</table></div>
+<p>Iron Nexus is retired in <strong>Year 18</strong>. Bharat bonds are retired in <strong>Year 20</strong>, 15 years ahead of the 35-year schedule. Repaid amounts include bulk (Track 1) and retail (Track 2) repayments.</p>
+<h4>Sensitivity: 130% Growth Track</h4>
+<p>Group inflows for Years 1 to 19 are scaled to 130% of the base case. Global Retail repayments are unchanged, and both series are repaid from the same pool. Years 20 onward are unchanged because the 70%-of-world-GDP cap binds from Year 20 on both tracks.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Year</th><th class="num">Group inflow</th><th class="num">Bulk (Track 1) repaid</th><th class="num">Retail (Track 2) repaid</th><th class="num">Iron Nexus repaid (incl. interest)</th><th class="num">Iron Nexus closing</th><th class="num">Bharat repaid (incl. interest)</th><th class="num">Bharat closing</th></tr></thead>
+<tbody>
+<tr><td>15</td><td class="num">5.174</td><td class="num">-</td><td class="num">0.362</td><td class="num">2.432</td><td class="num">40.684</td><td class="num">-</td><td class="num">56.000</td></tr>
+<tr><td>16</td><td class="num">10.348</td><td class="num">-</td><td class="num">0.362</td><td class="num">10.440</td><td class="num">33.906</td><td class="num">-</td><td class="num">61.040</td></tr>
+<tr><td>17</td><td class="num">20.696</td><td class="num">-</td><td class="num">0.362</td><td class="num">20.788</td><td class="num">16.169</td><td class="num">-</td><td class="num">66.534</td></tr>
+<tr><td>18</td><td class="num">41.392</td><td class="num">-</td><td class="num">0.362</td><td class="num">17.625</td><td class="num">-</td><td class="num">23.859</td><td class="num">48.662</td></tr>
+<tr><td>19</td><td class="num">83.330</td><td class="num">-</td><td class="num">0.362</td><td class="num">-</td><td class="num">-</td><td class="num">53.042</td><td class="num">-</td></tr>
+</tbody>
+</table></div>
+<p>On this track Iron Nexus is retired in <strong>Year 18</strong> and Bharat in <strong>Year 19</strong>.</p>
+<h4>Post-Debt Capital Allocation</h4>
+<p>Once both bond series are retired, 100% of net profit is distributed to GK Bharta. Distributions total <strong>$177.29 Trillion</strong> through Year 21 on the base case, and <strong>$217.15 Trillion</strong> on the 130% track.</p>
+</section>
+<section class="card">
+<h3>9. The 21-Year Consolidated Cash Allocation Ledger</h3>
+<p>Operating under the <strong>100% Target Growth Scenario</strong>, the system reinvests 60% of after-tax profits into capacity expansion. From Year 15, 40% of group inflow buys back <strong>Iron Nexus bonds</strong>. Bulk (Track 1) and retail (Track 2) repayments reduce the debt from Year 1: before Year 15 they reduce the construction balance, and from Year 15 they reduce the bonds. From Year 16, the pool pays <strong>9% interest</strong> and then principal, Iron Nexus first and then Bharat. Once both series are retired, 100% of net profit goes to GK Bharta. Cash flows hit a strict macro-prudential regulatory cap at <strong>70% of world nominal GDP</strong>, which is not tested here.</p>
+<div class="cf22">
+<div class="cards">
+<div class="card"><div class="k">Total gross inflow, Years 1–21</div><div class="v">317.4T</div><div class="n">Group 311.4T, bulk 0.00T, retail 6.0T</div></div>
+<div class="card"><div class="k">Iron Nexus repaid</div><div class="v">55.8T</div><div class="n">Retired Year 18</div></div>
+<div class="card"><div class="k">Bharat repaid</div><div class="v">79.3T</div><div class="n">Retired Year 20</div></div>
+<div class="card"><div class="k">Distributed to GK Bharta</div><div class="v">177.3T</div><div class="n">From Year 20, through Year 21</div></div>
+</div>
+<h4>Annual flows</h4>
+<div class="legend">
+<span><span class="sw" style="background:#1F3864"></span>Debt repaid</span>
+<span><span class="sw" style="background:#8FAADC"></span>Retained reserve</span>
+<span><span class="sw" style="background:#2E7D32"></span>Distribution to GK Bharta</span>
+</div>
+<div class="chart"><svg aria-label="Annual flows by year, Years 1 to 21" role="img" viewbox="0 0 640 300" width="100%"><line class="grid" x1="40" x2="600" y1="208.0" y2="208.0"></line><line class="grid" x1="40" x2="600" y1="153.0" y2="153.0"></line><line class="grid" x1="40" x2="600" y1="98.0" y2="98.0"></line><line class="grid" x1="40" x2="600" y1="43.0" y2="43.0"></line><rect fill="#1F3864" height="0.1" width="21.9" x="42.0" y="262.9"><title>Year 1 Debt repaid: 0.029T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="42.0" y="262.9"><title>Year 1 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.1" width="21.9" x="67.7" y="262.9"><title>Year 2 Debt repaid: 0.058T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="67.7" y="262.8"><title>Year 2 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.2" width="21.9" x="93.4" y="262.8"><title>Year 3 Debt repaid: 0.087T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="93.4" y="262.7"><title>Year 3 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.3" width="21.9" x="119.1" y="262.7"><title>Year 4 Debt repaid: 0.116T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="119.1" y="262.7"><title>Year 4 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.3" width="21.9" x="144.9" y="262.7"><title>Year 5 Debt repaid: 0.145T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="144.9" y="262.6"><title>Year 5 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.3" width="21.9" x="170.6" y="262.7"><title>Year 6 Debt repaid: 0.145T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="170.6" y="262.6"><title>Year 6 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="196.3" y="262.2"><title>Year 7 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="196.3" y="262.1"><title>Year 7 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="222.0" y="262.2"><title>Year 8 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="222.0" y="262.1"><title>Year 8 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="247.7" y="262.2"><title>Year 9 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="247.7" y="262.1"><title>Year 9 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="273.4" y="262.2"><title>Year 10 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.1" width="21.9" x="273.4" y="262.1"><title>Year 10 Retained: 0.030T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="299.1" y="262.2"><title>Year 11 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.4" width="21.9" x="299.1" y="261.8"><title>Year 11 Retained: 0.165T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="324.9" y="262.2"><title>Year 12 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.4" width="21.9" x="324.9" y="261.8"><title>Year 12 Retained: 0.165T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="350.6" y="262.2"><title>Year 13 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.4" width="21.9" x="350.6" y="261.8"><title>Year 13 Retained: 0.165T</title></rect><rect fill="#1F3864" height="0.8" width="21.9" x="376.3" y="262.2"><title>Year 14 Debt repaid: 0.362T</title></rect><rect fill="#8FAADC" height="0.4" width="21.9" x="376.3" y="261.8"><title>Year 14 Retained: 0.165T</title></rect><rect fill="#1F3864" height="4.3" width="21.9" x="402.0" y="258.7"><title>Year 15 Debt repaid: 1.954T</title></rect><rect fill="#8FAADC" height="5.3" width="21.9" x="402.0" y="253.4"><title>Year 15 Retained: 2.388T</title></rect><rect fill="#1F3864" height="17.7" width="21.9" x="427.7" y="245.3"><title>Year 16 Debt repaid: 8.052T</title></rect><rect fill="#1F3864" height="35.2" width="21.9" x="453.4" y="227.8"><title>Year 17 Debt repaid: 16.012T</title></rect><rect fill="#1F3864" height="70.3" width="21.9" x="479.1" y="192.7"><title>Year 18 Debt repaid: 31.932T</title></rect><rect fill="#1F3864" height="141.2" width="21.9" x="504.9" y="121.8"><title>Year 19 Debt repaid: 64.192T</title></rect><rect fill="#1F3864" height="20.9" width="21.9" x="530.6" y="242.1"><title>Year 20 Debt repaid: 9.486T</title></rect><rect fill="#2E7D32" height="184.6" width="21.9" x="530.6" y="57.5"><title>Year 20 Distribution: 83.901T</title></rect><rect fill="#2E7D32" height="205.5" width="21.9" x="556.3" y="57.5"><title>Year 21 Distribution: 93.387T</title></rect><text class="ax" font-size="9" text-anchor="middle" x="52.9" y="274">1</text><text class="ax" font-size="9" text-anchor="middle" x="78.6" y="274">2</text><text class="ax" font-size="9" text-anchor="middle" x="104.4" y="274">3</text><text class="ax" font-size="9" text-anchor="middle" x="130.1" y="274">4</text><text class="ax" font-size="9" text-anchor="middle" x="155.8" y="274">5</text><text class="ax" font-size="9" text-anchor="middle" x="181.5" y="274">6</text><text class="ax" font-size="9" text-anchor="middle" x="207.2" y="274">7</text><text class="ax" font-size="9" text-anchor="middle" x="232.9" y="274">8</text><text class="ax" font-size="9" text-anchor="middle" x="258.6" y="274">9</text><text class="ax" font-size="9" text-anchor="middle" x="284.4" y="274">10</text><text class="ax" font-size="9" text-anchor="middle" x="310.1" y="274">11</text><text class="ax" font-size="9" text-anchor="middle" x="335.8" y="274">12</text><text class="ax" font-size="9" text-anchor="middle" x="361.5" y="274">13</text><text class="ax" font-size="9" text-anchor="middle" x="387.2" y="274">14</text><text class="ax" font-size="9" text-anchor="middle" x="412.9" y="274">15</text><text class="ax" font-size="9" text-anchor="middle" x="438.6" y="274">16</text><text class="ax" font-size="9" text-anchor="middle" x="464.4" y="274">17</text><text class="ax" font-size="9" text-anchor="middle" x="490.1" y="274">18</text><text class="ax" font-size="9" text-anchor="middle" x="515.8" y="274">19</text><text class="ax" font-size="9" text-anchor="middle" x="541.5" y="274">20</text><text class="ax" font-size="9" text-anchor="middle" x="567.2" y="274">21</text><text class="ax" font-size="9" text-anchor="end" x="34" y="263.0">0</text><text class="ax" font-size="9" text-anchor="end" x="34" y="208.0">25</text><text class="ax" font-size="9" text-anchor="end" x="34" y="153.0">50</text><text class="ax" font-size="9" text-anchor="end" x="34" y="98.0">75</text><text class="ax" font-size="9" text-anchor="end" x="34" y="43.0">100</text><text class="ax" font-size="10" x="40" y="14">USD trillions</text></svg></div>
+<h4>Year-by-year ledger</h4>
+<div class="wrap"><table>
+<thead><tr><th>Year</th><th class="l">Phase</th><th>Group inflow</th><th>Bulk (Track 1)</th><th>Retail (Track 2)</th><th>O&amp;M</th><th>Debt repaid</th><th>Retained</th><th>Distribution</th><th>Cumulative distribution</th><th>Debt outstanding</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.029</td><td>-</td><td>0.029</td><td>0.030</td><td>-</td><td>-</td><td>46.561</td></tr>
+<tr><td>2</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.058</td><td>-</td><td>0.058</td><td>0.030</td><td>-</td><td>-</td><td>46.503</td></tr>
+<tr><td>3</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.087</td><td>-</td><td>0.087</td><td>0.030</td><td>-</td><td>-</td><td>46.416</td></tr>
+<tr><td>4</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.116</td><td>-</td><td>0.116</td><td>0.030</td><td>-</td><td>-</td><td>46.300</td></tr>
+<tr><td>5</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.145</td><td>-</td><td>0.145</td><td>0.030</td><td>-</td><td>-</td><td>46.156</td></tr>
+<tr><td>6</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.145</td><td>-</td><td>0.145</td><td>0.030</td><td>-</td><td>-</td><td>46.011</td></tr>
+<tr><td>7</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.030</td><td>-</td><td>-</td><td>45.649</td></tr>
+<tr><td>8</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.030</td><td>-</td><td>-</td><td>45.287</td></tr>
+<tr><td>9</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.030</td><td>-</td><td>-</td><td>44.925</td></tr>
+<tr><td>10</td><td class="l">Retained gestation</td><td>0.030</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.030</td><td>-</td><td>-</td><td>44.563</td></tr>
+<tr><td>11</td><td class="l">Pre-operational staging</td><td>0.165</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.165</td><td>-</td><td>-</td><td>44.201</td></tr>
+<tr><td>12</td><td class="l">Pre-operational staging</td><td>0.165</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.165</td><td>-</td><td>-</td><td>43.839</td></tr>
+<tr><td>13</td><td class="l">Pre-operational staging</td><td>0.165</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.165</td><td>-</td><td>-</td><td>43.478</td></tr>
+<tr><td>14</td><td class="l">Pre-operational staging</td><td>0.165</td><td>-</td><td>0.362</td><td>-</td><td>0.362</td><td>0.165</td><td>-</td><td>-</td><td>43.116</td></tr>
+<tr><td>15</td><td class="l">Operational launch; 40% buyback</td><td>3.980</td><td>-</td><td>0.362</td><td>-</td><td>1.954</td><td>2.388</td><td>-</td><td>-</td><td>97.162</td></tr>
+<tr><td>16</td><td class="l">Compounding growth</td><td>7.960</td><td>-</td><td>0.362</td><td>0.270</td><td>8.052</td><td>-</td><td>-</td><td>-</td><td>97.854</td></tr>
+<tr><td>17</td><td class="l">Logistics acceleration</td><td>15.920</td><td>-</td><td>0.362</td><td>0.270</td><td>16.012</td><td>-</td><td>-</td><td>-</td><td>90.649</td></tr>
+<tr><td>18</td><td class="l">Iron Nexus retired; Bharat begins</td><td>31.840</td><td>-</td><td>0.362</td><td>0.270</td><td>31.932</td><td>-</td><td>-</td><td>-</td><td>66.876</td></tr>
+<tr><td>19</td><td class="l">Bharat repayment</td><td>64.100</td><td>-</td><td>0.362</td><td>0.270</td><td>64.192</td><td>-</td><td>-</td><td>-</td><td>8.703</td></tr>
+<tr><td>20</td><td class="l">Bharat retired; distribution begins</td><td>93.295</td><td>-</td><td>0.362</td><td>0.270</td><td>9.486</td><td>-</td><td>83.901</td><td>83.901</td><td>-</td></tr>
+<tr><td>21</td><td class="l">Post-debt run-rate</td><td>93.295</td><td>-</td><td>0.362</td><td>0.270</td><td>-</td><td>-</td><td>93.387</td><td>177.288</td><td>-</td></tr>
+<tr class="t"><td>Total</td><td class="l"></td><td>311.350</td><td>0.000</td><td>6.008</td><td>1.620</td><td>135.102</td><td>3.348</td><td>177.288</td><td></td><td></td></tr>
+</tbody></table></div>
+<h4>Basis and assumptions</h4>
+<ul>
+<li>Group inflows are unchanged from the previous ledger. Years 1–10 ($0.300T) and Years 11–14 ($0.660T) are period totals in the source, spread evenly across each period. Annual figures for these years are an assumption.</li>
+<li><strong>Retail (Track 2)</strong> repayments come from the Global Retail model: 40% of net profit in Years 1 to 6, and 100% from Year 7. Net profit is after the model's 50% expense and 17% tax.</li>
+<li><strong>Bulk (Track 1)</strong> profit is 15.184% of GMV, the source's fixed bulk transaction rate, applied to bulk GMV for Years 1 to 5 ($15.14M to $231.53M). GMV is held at the Year 5 level to Year 21. Bulk repays 40% of its profit to the loan from Year 2. Year 1 is excluded because it is the investor loan retiral.</li>
+<li><strong>Bulk and retail are separate.</strong> Bulk is built from GMV, and retail is the Global Retail model. The source's combined Track 1 and 2 projection is no longer used.</li>
+<li>Bond interest is 9% on the opening balance from Year 16. Bharat interest is capitalised while Iron Nexus is outstanding. Before Year 15, repayments reduce Iron Nexus principal but not its capitalised construction interest, which is a simplifying assumption.</li>
+<li>O&amp;M of $0.270T a year applies from Year 16. Surplus in Year 19 goes to Bharat repayment rather than a reserve, so the Bharat balance is lower than in the previous ledger, which held about $0.25T in reserve.</li>
+<li>Distributions to GK Bharta begin only after both bond series are retired. No profit share is paid before then.</li>
+</ul>
+<p class="note">Model checks: total inflow equals O&amp;M, debt repaid, retained and distribution across Years 1 to 21. With bulk and retail set to zero, the schedule reproduces the previous Iron Nexus and Bharat retirement years (Year 19 and Year 20). The companion spreadsheet referenced in earlier versions is not included and does not reflect these figures.</p>
+</div>
+</section>
+<section class="card">
+<h3>9A. Pooled Cash Flow</h3>
+<p>This table shows the pooled cash flow for Years 1 to 21, by revenue stream. It reconciles to the Section 9 ledger: total inflow equals O&amp;M, debt repaid, retained reserve and distribution in every year. Values are in USD billions unless stated.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Year</th><th class="num">Group inflow ($B)</th><th class="num">Bulk repayment ($M)</th><th class="num">Retail repayment ($B)</th><th class="num">Total inflow ($B)</th><th class="num">O&amp;M ($B)</th><th class="num">Debt repaid ($B)</th><th class="num">Retained ($B)</th><th class="num">Distribution to GK Bharta ($B)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>30.0</td><td>–</td><td>28.9</td><td>59.0</td><td>–</td><td>28.9</td><td>30.0</td><td>–</td></tr>
+<tr><td>2</td><td>30.0</td><td>1.36</td><td>57.9</td><td>87.9</td><td>–</td><td>57.9</td><td>30.0</td><td>–</td></tr>
+<tr><td>3</td><td>30.0</td><td>2.96</td><td>86.9</td><td>116.9</td><td>–</td><td>86.9</td><td>30.0</td><td>–</td></tr>
+<tr><td>4</td><td>30.0</td><td>6.45</td><td>115.8</td><td>145.8</td><td>–</td><td>115.8</td><td>30.0</td><td>–</td></tr>
+<tr><td>5</td><td>30.0</td><td>14.06</td><td>144.8</td><td>174.8</td><td>–</td><td>144.8</td><td>30.0</td><td>–</td></tr>
+<tr><td>6</td><td>30.0</td><td>14.06</td><td>144.8</td><td>174.8</td><td>–</td><td>144.8</td><td>30.0</td><td>–</td></tr>
+<tr><td>7</td><td>30.0</td><td>14.06</td><td>361.9</td><td>391.9</td><td>–</td><td>361.9</td><td>30.0</td><td>–</td></tr>
+<tr><td>8</td><td>30.0</td><td>14.06</td><td>361.9</td><td>391.9</td><td>–</td><td>361.9</td><td>30.0</td><td>–</td></tr>
+<tr><td>9</td><td>30.0</td><td>14.06</td><td>361.9</td><td>391.9</td><td>–</td><td>361.9</td><td>30.0</td><td>–</td></tr>
+<tr><td>10</td><td>30.0</td><td>14.06</td><td>361.9</td><td>391.9</td><td>–</td><td>361.9</td><td>30.0</td><td>–</td></tr>
+<tr><td>11</td><td>165.0</td><td>14.06</td><td>361.9</td><td>526.9</td><td>–</td><td>361.9</td><td>165.0</td><td>–</td></tr>
+<tr><td>12</td><td>165.0</td><td>14.06</td><td>361.9</td><td>526.9</td><td>–</td><td>361.9</td><td>165.0</td><td>–</td></tr>
+<tr><td>13</td><td>165.0</td><td>14.06</td><td>361.9</td><td>526.9</td><td>–</td><td>361.9</td><td>165.0</td><td>–</td></tr>
+<tr><td>14</td><td>165.0</td><td>14.06</td><td>361.9</td><td>526.9</td><td>–</td><td>361.9</td><td>165.0</td><td>–</td></tr>
+<tr><td>15</td><td>3,980.0</td><td>14.06</td><td>361.9</td><td>4,341.9</td><td>–</td><td>1,953.9</td><td>2,388.0</td><td>–</td></tr>
+<tr><td>16</td><td>7,960.0</td><td>14.06</td><td>361.9</td><td>8,321.9</td><td>270.0</td><td>8,051.9</td><td>–</td><td>–</td></tr>
+<tr><td>17</td><td>15,920.0</td><td>14.06</td><td>361.9</td><td>16,281.9</td><td>270.0</td><td>16,011.9</td><td>–</td><td>–</td></tr>
+<tr><td>18</td><td>31,840.0</td><td>14.06</td><td>361.9</td><td>32,201.9</td><td>270.0</td><td>31,931.9</td><td>–</td><td>–</td></tr>
+<tr><td>19</td><td>64,100.0</td><td>14.06</td><td>361.9</td><td>64,461.9</td><td>270.0</td><td>64,191.9</td><td>–</td><td>–</td></tr>
+<tr><td>20</td><td>93,295.0</td><td>14.06</td><td>361.9</td><td>93,656.9</td><td>270.0</td><td>9,486.0</td><td>–</td><td>83,900.9</td></tr>
+<tr><td>21</td><td>93,295.0</td><td>14.06</td><td>361.9</td><td>93,656.9</td><td>270.0</td><td>–</td><td>–</td><td>93,386.9</td></tr>
+<tr class="t"><td>Total</td><td>311,350</td><td>249.83</td><td>6,007.5</td><td>317,357.8</td><td>1,620</td><td>135,102</td><td>3,348</td><td>177,287.8</td></tr>
+</tbody>
+</table></div>
+<p class="note">Debt repaid in Years 1 to 14 is the Global Retail and bulk repayments applied to the construction balance. From Year 15 it is bond principal and interest. Iron Nexus is retired in Year 18 and Bharat in Year 20. Distributions to GK Bharta start in Year 20, once both bond series are retired. Group inflow is the combined total of the other streams, before O&amp;M, and the sources do not split it by stream and year.</p>
+</section><section class="card">
+<h3>
+     10. Strategic Investment Summary, Validation Gates &amp; Milestones
+    </h3>
+<ul>
+<li>
+<strong>
+       Blueprint Verdict:
+      </strong>
+      The Delper Integrated Master Blueprint states the programme is unconditionally viable, citing the token economy's 2% transaction tax, the $12.11 Trillion treasury float, and 24/7 software-defined manufacturing as drivers of rapid capital amortization.
+     </li>
+<li>
+<strong>
+       Post-Debt Treasury:
+      </strong>
+      Once debt is retired, the project operates at macro profit margins, leaving the corporate entity an unencumbered treasury to capitalize future global trade expansion.
+     </li>
+<li>
+<strong>
+       Immediate Milestone Gating:
+      </strong>
+      The multi-trillion-dollar expansion is insulated behind short-term operational proof gates:
+     </li>
+</ul>
+<pre class="flow">[Month 0-2: Framework Validation]  ──&gt; Secure letters of intent from Axis Bank, ONDC, and SGS.
+
+[Month 2-9: Cost-Per-Order Pilot]  ──&gt; Run 300-500 transactions to verify supplier fee acceptance.
+
+[Year 2-5: Network Scalability]    ──&gt; Scale to 15,000 sellers before advancing Aegis FaaS capital.</pre>
+<h4>
+     Non-Negotiable Validation Gates (First 36 Months)
+    </h4>
+<ol>
+<li>
+<strong>
+       Industrial Frame Stress Testing:
+      </strong>
+      Inject over 5,000,000 malformed frames per hour into 5nm FinFET Delper Guard processors to confirm self-quarantine without dropping robotic synchronization.
+     </li>
+<li>
+<strong>
+       60-Day Shadow Mode:
+      </strong>
+      Passively record the first 4,000 Year 1 factory hulls for at least 60 days to build baseline models of Modbus/PROFINET traffic before live enforcement.
+     </li>
+<li>
+<strong>
+       Wafer Procurement Lock-In:
+      </strong>
+      Secure multi-year advanced node fabrication agreements with global foundries against semiconductor supply shocks.
+     </li>
+<li>
+<strong>
+       Legal Restructuring of Training Bonds:
+      </strong>
+      Complete a multi-jurisdictional review of student repayment terms so that ₹20.0 crore per-hub refund exposure is legally isolated from tuition revenue.
+     </li>
+</ol>
+</section>
+<section class="card" id="esg-sdg">
+<h3>11. ESG and SDG Alignment</h3>
+<p>This section maps the programme to the UN Sustainable Development Goals (SDGs) and to the Environmental, Social and Governance (ESG) pillars. It records where the programme contributes, where it creates risk, and what must be evidenced before alignment can be claimed. The mapping uses the figures stated in this summary and has not been independently assessed. Each contribution is a design claim until it has a baseline, a metric and an independent verifier.</p>
+<h4>SDG contribution map</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>SDG</th><th>Relationship</th><th>Basis in this document</th><th>Gap or risk to close</th></tr></thead>
+<tbody>
+<tr><td><strong>SDG 7</strong> Affordable and Clean Energy</td><td>Positive</td><td>840 GW of dedicated zero-carbon nuclear baseload supplies the Make in India matrix (Section 2).</td><td>Nuclear build-out carries long lead times, licensing and cost risk. No siting, safety or waste plan is included.</td></tr>
+<tr><td><strong>SDG 9</strong> Industry, Innovation and Infrastructure</td><td>Positive, primary</td><td>Iron Nexus multimodal grid, automated ports, digital customs and dark-factory manufacturing (Sections 2 and 3).</td><td>Scale is very large relative to the stated sources. A phased delivery plan with independent verification is needed.</td></tr>
+<tr><td><strong>SDG 13</strong> Climate Action</td><td>Positive, conditional</td><td>Rail freight is designed to cut transport energy use by 60% (Section 2).</td><td>No lifecycle carbon assessment of construction materials such as cement and steel, and no net-zero pathway or emissions baseline.</td></tr>
+<tr><td><strong>SDG 8</strong> Decent Work and Economic Growth</td><td>Positive</td><td>Forward-deployed engineering roles, 24/7 monitoring teams and a verified trade channel for SMEs (Sections 2 and 4).</td><td>No labour standards, wage, health and safety, or grievance policy is stated for the workforce across the build.</td></tr>
+<tr><td><strong>SDG 4</strong> Quality Education</td><td>Positive</td><td>A 12-month, credit-bearing Post-Graduate Advanced Diploma delivered with UVCE and Bangalore University (Section 2).</td><td>Training bonds carry a ₹20.0 crore per-hub refund exposure (Section 10). Repayment terms may deter learners and need review.</td></tr>
+<tr><td><strong>SDG 12</strong> Responsible Consumption and Production</td><td>Positive, conditional</td><td>Verified sourcing, third-party quality control and SGS linkages reduce counterfeit goods and phantom inventory (Sections 1 and 4).</td><td>Verification covers sourcing claims. Product lifecycle, packaging and waste are not addressed.</td></tr>
+<tr><td><strong>SDG 14</strong> Life Below Water</td><td>Negative risk</td><td>A 7,500 km coastal corridor with automated seaports, desalination and coastal nuclear plants (Sections 2 and 3).</td><td>No marine impact assessment, dredging plan or brine discharge controls are stated.</td></tr>
+<tr><td><strong>SDG 15</strong> Life on Land</td><td>Negative risk</td><td>Rail, highway and dry-port corridors. Palm oil routing of 1,000,000 metric tons a year (Section 5).</td><td>Habitat fragmentation is not assessed. Palm oil carries deforestation risk unless certified (for example RSPO) and traceable. EU Deforestation Regulation compliance is not addressed.</td></tr>
+<tr><td><strong>SDG 16</strong> Peace, Justice and Strong Institutions</td><td>Positive and risk</td><td>Digital AI customs and anti-counterfeit controls reduce manual discretion and corruption exposure (Sections 1 and 2).</td><td>Full control sits with the holding company (Top-Co), and ownership passes to GK Bharta. This needs independent governance review.</td></tr>
+<tr><td><strong>SDG 17</strong> Partnerships for the Goals</td><td>Positive, unverified</td><td>World Bank Group (IBRD) and AIIB guarantees are described over the construction tranches (Section 7).</td><td>No guarantee term sheet or written confirmation is included. This must be evidenced before reliance.</td></tr>
+</tbody>
+</table></div>
+<h4>ESG pillar review</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>Pillar</th><th>Strengths stated</th><th>Material gaps to address</th></tr></thead>
+<tbody>
+<tr><td><strong>Environmental</strong></td><td>Zero-carbon baseload power, rail-led freight and digital customs that replace paper-based processing.</td><td>No environmental and social impact assessment, carbon accounting (Scopes 1, 2 and 3), biodiversity plan or water plan. Coastal and desalination impacts are unassessed.</td></tr>
+<tr><td><strong>Social</strong></td><td>Credit-bearing training pathway, engineering roles, SME access to global buyers and a restructured training-bond review.</td><td>No labour, human-rights or community-engagement framework. Coastal land use across the 560,000 dark factories raises acquisition and displacement questions. Data privacy for 1.2 to 6.0 billion buyers is not addressed. Security deployments near communities need a human-rights policy.</td></tr>
+<tr><td><strong>Governance</strong></td><td>Ring-fenced investor cash, independent SGS quality checks and validation gates (Section 10).</td><td>Section 10 describes the programme as "unconditionally viable", which conflicts with the gates in the same section. The token tax, treasury float and wrapper depend on regulatory approvals not yet confirmed. Concentrated control and related-party ownership need independent review. No board, audit or ESG reporting structure is described.</td></tr>
+</tbody>
+</table></div>
+<div class="callout">
+<p><strong>Overall assessment</strong></p>
+<p>On the stated design, the programme aligns most clearly with SDGs 7, 8, 9 and 13. It carries material negative exposure under SDGs 14 and 15, and its environmental and governance claims are unverified. Until the actions below are complete, alignment should be described as "designed to contribute to" these goals, not as achieved.</p>
+</div>
+<h4>Actions before ESG and SDG claims are relied on</h4>
+<ol>
+<li><strong>Impact assessment:</strong> Commission an independent environmental and social impact assessment for the coastal corridor, nuclear sites and rail routes.</li>
+<li><strong>Carbon baseline:</strong> Publish a carbon baseline and a net-zero construction pathway that covers cement and steel.</li>
+<li><strong>Palm oil policy:</strong> Adopt a sourcing policy with certification, traceability and deforestation-free commitments before the palm oil route begins.</li>
+<li><strong>Labour and community framework:</strong> Set a labour, human-rights and community-engagement framework covering workers across the 560,000 dark factories and affected communities.</li>
+<li><strong>Financing evidence:</strong> Obtain written confirmation of the IBRD and AIIB guarantee terms, and an independent legal review of the token-based financing.</li>
+<li><strong>KPIs and reporting:</strong> Define 8 to 12 indicators for the aligned SDGs, each with a baseline, a target and a verifier, and report annually against GRI or ISSB (IFRS S1 and S2).</li>
+</ol>
+<p class="note">Alignment statements in this section are design-level assessments based on the figures in this summary. They are not an external ESG rating or SDG certification, and they have not been independently verified.</p>
+</section>
+<footer>
+    Aligned to the Delper Integrated Consolidated Master Blueprint. Figures follow the Blueprint where the two documents differ. Figures are as stated in the source documents and have not been independently verified.
+   </footer>
+<footer style="text-align:left">
+<p>
+     Links
+    </p>
+<ul style="text-align:left">
+<li>
+<a href="https://gkbharta44-code.github.io/Delper-Global-Trust-Layer/">
+       Delper Bulk
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Delper-Retail-/">
+       Delper Global Retail
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Radiant-/" style="text-decoration:underline">
+       Radiant Valuation
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Delper-Process-Guard---Zero-Trust-/">
+       Delper Aegis - Deeptech Project
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Aegis-Chip/" rel="noopener noreferrer" style="text-decoration:underline" target="_blank">
+       Aegis Chip
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Multi-Modal-Global-Logistics-/" style="text-decoration:underline">
+       Global Multi Mode Logistics Infra
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Make-in-India-/" rel="noopener noreferrer" style="text-decoration:underline" target="_blank">
+       Make in India 🇮🇳
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Delper-Chip/" rel="noopener noreferrer" style="text-decoration:underline" target="_blank">
+       Delper Chip
+      </a>
+</li>
+<li>
+<a href="https://delpertoken.com" style="text-decoration:underline">
+       Dpr Tokenomics
+      </a>
+</li>
+<li>
+<a href="https://radiantsynage.com">
+       The Digital Signage People
+      </a>
+</li>
+<li>
+<a href="https://drive.google.com/file/d/1mRtWwTSs5lkS5zcqyN_BsYEFjD-SHVPc/view?usp=drivesdk" style="text-decoration:underline">
+       Audio Version
+      </a>
+</li>
+<li>
+<a href="https://www.dextools.io/app/ether/pair-explorer/0xa14d7186a935a1f07ca247fa9363a8e45e8b68e9" rel="noopener noreferrer" style="text-decoration:underline" target="_blank">
+       Dpr on Dextools
+      </a>
+</li>
+<li>
+<a href="https://gkbharta44-code.github.io/Delper-CSR/">
+       Delper CSR - Support there, where it was earned - A Global Humanitarian Initiative
+      </a>
+</li>
+</ul>
+</footer>
+</main>
+</body>
+</html>
